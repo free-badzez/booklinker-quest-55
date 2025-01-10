@@ -89,7 +89,7 @@ const BookReader = () => {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-[#0f1117]' : 'bg-gray-100'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-reader-bg-dark' : 'bg-reader-bg-light'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
       {/* Header */}
       <header className={`${isDarkMode ? 'bg-[#161b22] border-gray-700' : 'bg-white border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200`}>
         <div className="flex items-center space-x-4">
