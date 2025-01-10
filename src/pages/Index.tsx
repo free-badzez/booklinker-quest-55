@@ -135,17 +135,16 @@ const Index = () => {
         </motion.div>
       </div>
 
-      {/* Alternative Layout Section */}
-      <div className="relative">
-        {/* Split background */}
+      {/* Motivation Section */}
+      <div className="relative py-20">
         <div className="absolute inset-0 z-0">
           <div className="h-full w-full flex">
-            <div className="w-[30%] bg-[#FDE1D3]" />
-            <div className="w-[70%] bg-[#D3E4FD]" />
+            <div className="w-[30%] bg-[#F4D03F]" /> {/* Golden color */}
+            <div className="w-[70%] bg-[#006064]" /> {/* Teal color */}
           </div>
         </div>
 
-        <div className="relative z-10 px-4 py-8">
+        <div className="relative z-10 px-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -159,7 +158,7 @@ const Index = () => {
                 transition={{ delay: 0.2 }}
                 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
               >
-                Alternative View
+                Motivation
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -167,7 +166,7 @@ const Index = () => {
                 transition={{ delay: 0.3 }}
                 className="text-lg text-gray-600"
               >
-                Discover books in a different layout
+                Books that inspire and motivate
               </motion.p>
             </header>
 
@@ -175,10 +174,64 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6"
+              className="relative min-h-[600px]"
+            >
+              {filteredBooks.map((book, index) => (
+                <motion.div
+                  key={`motivation-${book.id}`}
+                  className="absolute transform"
+                  style={{
+                    left: `${(index % 5) * 20}%`,
+                    top: `${Math.floor(index / 5) * 200}px`,
+                    transform: `rotate(${index % 2 === 0 ? -5 : 5}deg)`,
+                    zIndex: index,
+                  }}
+                  whileHover={{ scale: 1.05, rotate: 0, zIndex: 50 }}
+                >
+                  <BookCard {...book} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* SCI-FI Section */}
+      <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-20">
+        <div className="px-4">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="container mx-auto max-w-7xl"
+          >
+            <header className="text-center mb-12">
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-3xl md:text-4xl font-bold text-white mb-3"
+              >
+                SCI-FI
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-lg text-gray-300"
+              >
+                Explore the future through science fiction
+              </motion.p>
+            </header>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
               {filteredBooks.map((book) => (
-                <BookCard key={`alt-${book.id}`} {...book} />
+                <BookCard key={`scifi-${book.id}`} {...book} />
               ))}
             </motion.div>
           </motion.div>
