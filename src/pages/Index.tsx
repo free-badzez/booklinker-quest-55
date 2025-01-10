@@ -10,79 +10,89 @@ const books = [
     title: "A Memory Called Empire",
     author: "Arkady Martine",
     cover: "/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png",
-    link: "https://www.goodreads.com/book/show/37794149-a-memory-called-empire"
+    link: "/reader/a-memory-called-empire",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 2,
     title: "Project Hail Mary",
     author: "Andy Weir",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597695864i/54493401.jpg",
-    link: "https://www.goodreads.com/book/show/54493401-project-hail-mary"
+    link: "/reader/project-hail-mary",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 3,
     title: "Dune",
     author: "Frank Herbert",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
-    link: "https://www.goodreads.com/book/show/44767458-dune"
+    link: "/reader/dune",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 4,
     title: "Foundation",
     author: "Isaac Asimov",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1417900846i/29579.jpg",
-    link: "https://www.goodreads.com/book/show/29579.Foundation"
+    link: "/reader/foundation",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 5,
     title: "The Three-Body Problem",
     author: "Liu Cixin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
-    link: "https://www.goodreads.com/book/show/20518872-the-three-body-problem"
+    link: "/reader/three-body-problem",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 6,
     title: "Neuromancer",
     author: "William Gibson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
-    link: "https://www.goodreads.com/book/show/6088007-neuromancer"
+    link: "/reader/neuromancer",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 7,
     title: "Snow Crash",
     author: "Neal Stephenson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589842551i/40651883.jpg",
-    link: "https://www.goodreads.com/book/show/40651883-snow-crash"
+    link: "/reader/snow-crash",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 8,
     title: "Red Rising",
     author: "Pierce Brown",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1461354651i/15839976.jpg",
-    link: "https://www.goodreads.com/book/show/15839976-red-rising"
+    link: "/reader/red-rising",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 9,
     title: "Hyperion",
     author: "Dan Simmons",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405546838i/77566.jpg",
-    link: "https://www.goodreads.com/book/show/77566.Hyperion"
+    link: "/reader/hyperion",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 10,
     title: "The Left Hand of Darkness",
     author: "Ursula K. Le Guin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488213612i/18423.jpg",
-    link: "https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness"
+    link: "/reader/left-hand-of-darkness",
+    driveLink: "" // Add your Google Drive link here
   },
   {
     id: 11,
     title: "Children of Time",
     author: "Adrian Tchaikovsky",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
-    link: "https://www.goodreads.com/book/show/25499718-children-of-time"
+    link: "/reader/children-of-time",
+    driveLink: "" // Add your Google Drive link here
   },
-  // Self-help books (only visible in search)
   {
     id: 12,
     title: "Rich Dad Poor Dad",
