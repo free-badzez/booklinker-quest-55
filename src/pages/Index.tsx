@@ -38,48 +38,6 @@ const books = [
     author: "Liu Cixin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
     link: "https://www.goodreads.com/book/show/20518872-the-three-body-problem"
-  },
-  {
-    id: 6,
-    title: "Neuromancer",
-    author: "William Gibson",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
-    link: "https://www.goodreads.com/book/show/6088007-neuromancer"
-  },
-  {
-    id: 7,
-    title: "Snow Crash",
-    author: "Neal Stephenson",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589842551i/40651883.jpg",
-    link: "https://www.goodreads.com/book/show/40651883-snow-crash"
-  },
-  {
-    id: 8,
-    title: "Red Rising",
-    author: "Pierce Brown",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1461354651i/15839976.jpg",
-    link: "https://www.goodreads.com/book/show/15839976-red-rising"
-  },
-  {
-    id: 9,
-    title: "Hyperion",
-    author: "Dan Simmons",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405546838i/77566.jpg",
-    link: "https://www.goodreads.com/book/show/77566.Hyperion"
-  },
-  {
-    id: 10,
-    title: "The Left Hand of Darkness",
-    author: "Ursula K. Le Guin",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488213612i/18423.jpg",
-    link: "https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness"
-  },
-  {
-    id: 11,
-    title: "Children of Time",
-    author: "Adrian Tchaikovsky",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
-    link: "https://www.goodreads.com/book/show/25499718-children-of-time"
   }
 ];
 
