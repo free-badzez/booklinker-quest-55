@@ -2,7 +2,6 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import BookCard from "../components/BookCard";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const books = [
   {
@@ -114,16 +113,10 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-600 mb-6"
+            className="text-lg text-gray-600"
           >
             Find and explore your next favorite book
           </motion.p>
-          <Link 
-            to="/books" 
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            View All Books
-          </Link>
         </header>
 
         <SearchBar onSearch={setSearchQuery} />
@@ -134,7 +127,7 @@ const Index = () => {
           transition={{ delay: 0.4 }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
         >
-          {filteredBooks.slice(0, 5).map((book) => (
+          {filteredBooks.map((book) => (
             <BookCard key={book.id} {...book} />
           ))}
         </motion.div>
