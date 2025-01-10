@@ -11,7 +11,7 @@ const books = [
     author: "Arkady Martine",
     cover: "/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png",
     link: "/reader/a-memory-called-empire",
-    driveLink: "" // Add your Google Drive link here
+    driveLink: "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/view?usp=sharing" // Add your Google Drive link here
   },
   {
     id: 2,
