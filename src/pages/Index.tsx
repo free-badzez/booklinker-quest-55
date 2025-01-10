@@ -11,7 +11,34 @@ const books = [
     cover: "/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png",
     link: "https://www.goodreads.com/book/show/37794149-a-memory-called-empire"
   },
-  // Add more books here
+  {
+    id: 2,
+    title: "Project Hail Mary",
+    author: "Andy Weir",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597695864i/54493401.jpg",
+    link: "https://www.goodreads.com/book/show/54493401-project-hail-mary"
+  },
+  {
+    id: 3,
+    title: "Dune",
+    author: "Frank Herbert",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+    link: "https://www.goodreads.com/book/show/44767458-dune"
+  },
+  {
+    id: 4,
+    title: "Foundation",
+    author: "Isaac Asimov",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1417900846i/29579.jpg",
+    link: "https://www.goodreads.com/book/show/29579.Foundation"
+  },
+  {
+    id: 5,
+    title: "The Three-Body Problem",
+    author: "Liu Cixin",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
+    link: "https://www.goodreads.com/book/show/20518872-the-three-body-problem"
+  }
 ];
 
 const Index = () => {
@@ -24,29 +51,29 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white px-6 py-12">
+    <div className="min-h-screen bg-[#f8f9fa] px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="container mx-auto max-w-7xl"
       >
-        <header className="text-center mb-16">
+        <header className="text-center mb-12">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
           >
-            Discover Your Next Read
+            BookLinker
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-xl text-gray-600"
+            className="text-lg text-gray-600"
           >
-            Explore our curated collection of remarkable books
+            Find and explore your next favorite book
           </motion.p>
         </header>
 
@@ -56,7 +83,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
         >
           {filteredBooks.map((book) => (
             <BookCard key={book.id} {...book} />
