@@ -13,7 +13,8 @@ import {
   LayoutTemplate,
   MoveHorizontal,
   ArrowDownToLine,
-  RefreshCw
+  RefreshCw,
+  ChevronDown
 } from "lucide-react";
 
 const BookReader = () => {
