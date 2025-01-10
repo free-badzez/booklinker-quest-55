@@ -1,8 +1,7 @@
-import { useState } from "react";
-import SearchBar from "../components/SearchBar";
-import BookCard from "../components/BookCard";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import BookCard from "../components/BookCard";
+import SearchBar from "../components/SearchBar";
+import { useState } from "react";
 
 const books = [
   {
@@ -84,7 +83,7 @@ const books = [
   }
 ];
 
-const Index = () => {
+const Books = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredBooks = books.filter(
@@ -94,47 +93,51 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] px-4 py-8">
+    <div 
+      className="min-h-screen px-4 py-8"
+      style={{
+        backgroundImage: "url('/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="container mx-auto max-w-7xl"
       >
-        <header className="text-center mb-12">
+        <header className="text-center mb-12 bg-white/80 backdrop-blur-sm rounded-lg p-6">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
           >
-            BookLinker
+            Explore Our Library
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-600 mb-6"
+            className="text-lg text-gray-600"
           >
-            Find and explore your next favorite book
+            Discover your next literary adventure
           </motion.p>
-          <Link 
-            to="/books" 
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            View All Books
-          </Link>
         </header>
 
-        <SearchBar onSearch={setSearchQuery} />
+        <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 mb-8">
+          <SearchBar onSearch={setSearchQuery} />
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
         >
-          {filteredBooks.slice(0, 5).map((book) => (
+          {filteredBooks.map((book) => (
             <BookCard key={book.id} {...book} />
           ))}
         </motion.div>
@@ -143,4 +146,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Books;
