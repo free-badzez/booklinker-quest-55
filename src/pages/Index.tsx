@@ -82,6 +82,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
     link: "https://www.goodreads.com/book/show/25499718-children-of-time"
   },
+  // Self-help books (only visible in search)
   {
     id: 12,
     title: "Rich Dad Poor Dad",
@@ -105,7 +106,88 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg",
     link: "/reader/atomic-habits",
     driveLink: "" // Add your Google Drive link here
+  },
+  {
+    id: 15,
+    title: "Think and Grow Rich",
+    author: "Napoleon Hill",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463241782i/30186948.jpg",
+    link: "/reader/think-and-grow-rich",
+    driveLink: ""
+  },
+  {
+    id: 16,
+    title: "The 7 Habits of Highly Effective People",
+    author: "Stephen R. Covey",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421842784i/36072.jpg",
+    link: "/reader/7-habits",
+    driveLink: ""
+  },
+  {
+    id: 17,
+    title: "How to Win Friends and Influence People",
+    author: "Dale Carnegie",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442726934i/4865.jpg",
+    link: "/reader/how-to-win-friends",
+    driveLink: ""
+  },
+  {
+    id: 18,
+    title: "The Power of Now",
+    author: "Eckhart Tolle",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689947880i/6708.jpg",
+    link: "/reader/power-of-now",
+    driveLink: ""
+  },
+  {
+    id: 19,
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
+    link: "/reader/the-alchemist",
+    driveLink: ""
+  },
+  {
+    id: 20,
+    title: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1465761302i/28257707.jpg",
+    link: "/reader/subtle-art",
+    driveLink: ""
+  },
+  {
+    id: 21,
+    title: "The 4-Hour Work Week",
+    author: "Timothy Ferriss",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348972669i/368593.jpg",
+    link: "/reader/4-hour-work-week",
+    driveLink: ""
+  },
+  {
+    id: 22,
+    title: "Mindset: The New Psychology of Success",
+    author: "Carol S. Dweck",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436227012i/40745.jpg",
+    link: "/reader/mindset",
+    driveLink: ""
+  },
+  {
+    id: 23,
+    title: "Deep Work",
+    author: "Cal Newport",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1447957962i/25744928.jpg",
+    link: "/reader/deep-work",
+    driveLink: ""
+  },
+  {
+    id: 24,
+    title: "The Compound Effect",
+    author: "Darren Hardy",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391442225i/9420697.jpg",
+    link: "/reader/compound-effect",
+    driveLink: ""
   }
+];
 ];
 
 const visibleBooks = books.slice(0, 11); // Only show first 11 books by default
