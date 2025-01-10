@@ -188,7 +188,6 @@ const books = [
     driveLink: ""
   }
 ];
-];
 
 const visibleBooks = books.slice(0, 11); // Only show first 11 books by default
 
