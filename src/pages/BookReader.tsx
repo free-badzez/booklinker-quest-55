@@ -29,6 +29,8 @@ const BookReader = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [showBookDetails, setShowBookDetails] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const { toast } = useToast();
 
   // Mock book details - replace with actual data
@@ -41,37 +43,61 @@ const BookReader = () => {
   };
 
   useEffect(() => {
-    // Load saved bookmarks and current page from localStorage
-    const savedBookmarks = localStorage.getItem(`bookmarks-${bookId}`);
-    const savedPage = localStorage.getItem(`currentPage-${bookId}`);
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedBookmarks) {
-      setBookmarks(JSON.parse(savedBookmarks));
-    }
-    if (savedPage) {
-      setCurrentPage(parseInt(savedPage));
-    }
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === 'dark');
-    }
+    const loadBookData = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        
+        // Load saved bookmarks and current page from localStorage
+        const savedBookmarks = localStorage.getItem(`bookmarks-${bookId}`);
+        const savedPage = localStorage.getItem(`currentPage-${bookId}`);
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedBookmarks) {
+          setBookmarks(JSON.parse(savedBookmarks));
+        }
+        if (savedPage) {
+          setCurrentPage(parseInt(savedPage));
+        }
+        if (savedTheme) {
+          setIsDarkMode(savedTheme === 'dark');
+        }
 
-    // Apply theme
-    document.documentElement.classList.toggle('dark', isDarkMode);
+        // Apply theme
+        document.documentElement.classList.toggle('dark', isDarkMode);
+        
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Error loading book data:', err);
+        setError('Failed to load book data. Please try again later.');
+        setIsLoading(false);
+      }
+    };
+
+    loadBookData();
   }, [bookId]);
 
   const toggleBookmark = (page: number) => {
-    const newBookmarks = bookmarks.includes(page)
-      ? bookmarks.filter(b => b !== page)
-      : [...bookmarks, page];
-    
-    setBookmarks(newBookmarks);
-    localStorage.setItem(`bookmarks-${bookId}`, JSON.stringify(newBookmarks));
-    
-    toast({
-      title: bookmarks.includes(page) ? "Bookmark removed" : "Bookmark added",
-      description: `Page ${page} has been ${bookmarks.includes(page) ? "removed from" : "added to"} bookmarks`,
-    });
+    try {
+      const newBookmarks = bookmarks.includes(page)
+        ? bookmarks.filter(b => b !== page)
+        : [...bookmarks, page];
+      
+      setBookmarks(newBookmarks);
+      localStorage.setItem(`bookmarks-${bookId}`, JSON.stringify(newBookmarks));
+      
+      toast({
+        title: bookmarks.includes(page) ? "Bookmark removed" : "Bookmark added",
+        description: `Page ${page} has been ${bookmarks.includes(page) ? "removed from" : "added to"} bookmarks`,
+      });
+    } catch (err) {
+      console.error('Error toggling bookmark:', err);
+      toast({
+        title: "Error",
+        description: "Failed to update bookmark. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const updateCurrentPage = (page: number) => {
@@ -88,8 +114,32 @@ const BookReader = () => {
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin">
+          <RefreshCw className="w-8 h-8 text-gray-500" />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <AlertTriangle className="w-12 h-12 text-red-500 mx-auto" />
+          <p className="text-lg text-gray-700">{error}</p>
+          <Link to="/" className="text-blue-500 hover:text-blue-600">
+            Return to Home
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-reader-bg-dark' : 'bg-reader-bg-light'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
       {/* Header */}
       <header className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200`}>
         <div className="flex items-center space-x-4">
