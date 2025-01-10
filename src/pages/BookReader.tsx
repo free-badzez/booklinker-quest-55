@@ -91,7 +91,7 @@ const BookReader = () => {
   return (
     <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-reader-bg-dark' : 'bg-reader-bg-light'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
       {/* Header */}
-      <header className={`${isDarkMode ? 'bg-[#161b22] border-gray-700' : 'bg-white border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200`}>
+      <header className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200`}>
         <div className="flex items-center space-x-4">
           <Link to="/" className={`${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'}`}>
             <ChevronLeft className="w-6 h-6" />
@@ -144,7 +144,7 @@ const BookReader = () => {
             </div>
 
             {/* PDF Viewer */}
-            <div className={`aspect-[3/4] ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-lg mb-4 flex items-center justify-center transition-colors duration-200`}>
+            <div className={`aspect-[3/4] ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-lg mb-4 flex items-center justify-center transition-colors duration-200`}>
               <p className="text-center p-8">PDF Viewer will be implemented here</p>
             </div>
           </div>
@@ -152,7 +152,7 @@ const BookReader = () => {
 
         {/* Sidebar */}
         {isSidebarOpen && (
-          <ScrollArea className={`w-64 ${isDarkMode ? 'bg-[#161b22] border-gray-700' : 'bg-white border-gray-200'} border-l p-4 space-y-4 transition-colors duration-200`}>
+          <ScrollArea className={`w-64 ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-l p-4 space-y-4 transition-colors duration-200`}>
             <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>you are reading</div>
             <div className="font-medium">by chapter</div>
             
