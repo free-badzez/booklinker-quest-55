@@ -9,7 +9,7 @@ const books = [
     title: "A Memory Called Empire",
     author: "Arkady Martine",
     cover: "/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png",
-    link: "https://www.goodreads.com/book/show/37794149-a-memory-called-empire"
+    link: "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/view?usp=sharing"
   },
   {
     id: 2,
