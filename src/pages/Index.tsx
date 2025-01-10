@@ -136,15 +136,8 @@ const Index = () => {
       </div>
 
       {/* Motivation Section */}
-      <div className="relative py-20">
-        <div className="absolute inset-0 z-0">
-          <div className="h-full w-full flex">
-            <div className="w-[30%] bg-[#F4D03F]" /> {/* Golden color */}
-            <div className="w-[70%] bg-[#006064]" /> {/* Teal color */}
-          </div>
-        </div>
-
-        <div className="relative z-10 px-4">
+      <div className="bg-gradient-to-r from-[#FDE1D3] to-[#D3E4FD] py-16">
+        <div className="px-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -174,22 +167,10 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="relative min-h-[600px]"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
-              {filteredBooks.map((book, index) => (
-                <motion.div
-                  key={`motivation-${book.id}`}
-                  className="absolute transform"
-                  style={{
-                    left: `${(index % 5) * 20}%`,
-                    top: `${Math.floor(index / 5) * 200}px`,
-                    transform: `rotate(${index % 2 === 0 ? -5 : 5}deg)`,
-                    zIndex: index,
-                  }}
-                  whileHover={{ scale: 1.05, rotate: 0, zIndex: 50 }}
-                >
-                  <BookCard {...book} />
-                </motion.div>
+              {filteredBooks.map((book) => (
+                <BookCard key={`motivation-${book.id}`} {...book} />
               ))}
             </motion.div>
           </motion.div>
@@ -197,7 +178,7 @@ const Index = () => {
       </div>
 
       {/* SCI-FI Section */}
-      <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-20">
+      <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-16">
         <div className="px-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
