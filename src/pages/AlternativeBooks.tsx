@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import BookCard from "../components/BookCard";
 import { motion } from "framer-motion";
@@ -84,7 +83,7 @@ const books = [
   }
 ];
 
-const Index = () => {
+const AlternativeBooks = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredBooks = books.filter(
@@ -94,53 +93,57 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] px-4 py-8">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="container mx-auto max-w-7xl"
-      >
-        <header className="text-center mb-12">
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
-          >
-            BookLinker
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-lg text-gray-600"
-          >
-            Find and explore your next favorite book
-          </motion.p>
-          <Link
-            to="/alternative"
-            className="inline-block mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            View Alternative Layout
-          </Link>
-        </header>
+    <div className="min-h-screen relative">
+      {/* Split background */}
+      <div className="absolute inset-0 z-0">
+        <div className="h-full w-full flex">
+          <div className="w-[30%] bg-[#FDE1D3]" /> {/* Cream color */}
+          <div className="w-[70%] bg-[#D3E4FD]" /> {/* Soft blue color */}
+        </div>
+      </div>
 
-        <SearchBar onSearch={setSearchQuery} />
-
+      <div className="relative z-10 container mx-auto px-4 py-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-7xl mx-auto"
         >
-          {filteredBooks.map((book) => (
-            <BookCard key={book.id} {...book} />
-          ))}
+          <header className="text-center mb-12">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
+            >
+              Alternative View
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-lg text-gray-600"
+            >
+              Discover books in a different layout
+            </motion.p>
+          </header>
+
+          <SearchBar onSearch={setSearchQuery} />
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 mt-8"
+          >
+            {filteredBooks.map((book) => (
+              <BookCard key={book.id} {...book} />
+            ))}
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default Index;
+export default AlternativeBooks;
