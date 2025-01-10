@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import BookCard from "../components/BookCard";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const books = [
   {
@@ -80,17 +81,46 @@ const books = [
     author: "Adrian Tchaikovsky",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
     link: "https://www.goodreads.com/book/show/25499718-children-of-time"
+  },
+  {
+    id: 12,
+    title: "Rich Dad Poor Dad",
+    author: "Robert T. Kiyosaki",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388211242i/69571.jpg",
+    link: "/reader/rich-dad-poor-dad",
+    driveLink: "" // Add your Google Drive link here
+  },
+  {
+    id: 13,
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1581527774i/41881472.jpg",
+    link: "/reader/psychology-of-money",
+    driveLink: "" // Add your Google Drive link here
+  },
+  {
+    id: 14,
+    title: "Atomic Habits",
+    author: "James Clear",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg",
+    link: "/reader/atomic-habits",
+    driveLink: "" // Add your Google Drive link here
   }
 ];
 
+const visibleBooks = books.slice(0, 11); // Only show first 11 books by default
+
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
-  const filteredBooks = books.filter(
-    (book) =>
-      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredBooks = searchQuery
+    ? books.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : visibleBooks;
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
@@ -122,6 +152,15 @@ const Index = () => {
 
           <SearchBar onSearch={setSearchQuery} />
 
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-2xl font-bold text-gray-900 mb-6 text-left"
+          >
+            Top Read Books
+          </motion.h2>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -135,7 +174,6 @@ const Index = () => {
         </motion.div>
       </div>
 
-      {/* Motivation Section */}
       <div className="bg-gradient-to-r from-[#FDE1D3] to-[#D3E4FD] py-16">
         <div className="px-4">
           <motion.div
@@ -177,7 +215,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* SCI-FI Section */}
       <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-16">
         <div className="px-4">
           <motion.div
