@@ -40,13 +40,50 @@ export const ReaderControls = ({
     toast({
       title: "Error Reported",
       description: "Thank you for reporting this issue. We'll look into it.",
+      duration: 3000,
+    });
+  };
+
+  const handleViewModeChange = (mode: 'default' | 'longStrip' | 'fitBoth') => {
+    changeViewMode(mode);
+    toast({
+      title: `View Mode Changed`,
+      description: `Changed to ${mode === 'longStrip' ? 'Long Strip' : 'Fit Both'} mode`,
+      duration: 2000,
+    });
+  };
+
+  const handleBookmarkToggle = () => {
+    toggleBookmark(currentPage);
+    toast({
+      title: bookmarks.includes(currentPage) ? "Bookmark Removed" : "Bookmark Added",
+      description: `Page ${currentPage} has been ${bookmarks.includes(currentPage) ? "removed from" : "added to"} bookmarks`,
+      duration: 2000,
+    });
+  };
+
+  const handleHeaderStickyToggle = () => {
+    toggleHeaderSticky();
+    toast({
+      title: "Header Setting Changed",
+      description: `Header is now ${!isHeaderSticky ? 'sticky' : 'not sticky'}`,
+      duration: 2000,
+    });
+  };
+
+  const handleGoToLastPage = () => {
+    goToLastReadPage();
+    toast({
+      title: "Navigation",
+      description: "Jumped to last read page",
+      duration: 2000,
     });
   };
 
   return (
     <div className="space-y-2">
       <motion.button 
-        onClick={() => toggleBookmark(currentPage)}
+        onClick={handleBookmarkToggle}
         className={`w-full flex items-center space-x-2 p-2 ${
           isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
         } rounded transition-colors duration-200`}
@@ -69,7 +106,7 @@ export const ReaderControls = ({
       </motion.button>
       
       <motion.button 
-        onClick={toggleHeaderSticky}
+        onClick={handleHeaderStickyToggle}
         className={`w-full flex items-center space-x-2 p-2 ${
           isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
         } rounded transition-colors duration-200`}
@@ -84,7 +121,7 @@ export const ReaderControls = ({
       </motion.button>
       
       <motion.button 
-        onClick={() => changeViewMode('longStrip')}
+        onClick={() => handleViewModeChange('longStrip')}
         className={`w-full flex items-center space-x-2 p-2 ${
           isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
         } rounded transition-colors duration-200`}
@@ -96,7 +133,7 @@ export const ReaderControls = ({
       </motion.button>
       
       <motion.button 
-        onClick={() => changeViewMode('fitBoth')}
+        onClick={() => handleViewModeChange('fitBoth')}
         className={`w-full flex items-center space-x-2 p-2 ${
           isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
         } rounded transition-colors duration-200`}
@@ -108,7 +145,7 @@ export const ReaderControls = ({
       </motion.button>
       
       <motion.button 
-        onClick={goToLastReadPage}
+        onClick={handleGoToLastPage}
         className={`w-full flex items-center space-x-2 p-2 ${
           isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
         } rounded transition-colors duration-200`}
