@@ -55,11 +55,6 @@ export const ReaderControls = ({
 
   const handleBookmarkToggle = () => {
     toggleBookmark(currentPage);
-    toast({
-      title: bookmarks.includes(currentPage) ? "Bookmark Removed" : "Bookmark Added",
-      description: `Page ${currentPage} has been ${bookmarks.includes(currentPage) ? "removed from" : "added to"} bookmarks`,
-      duration: 2000,
-    });
   };
 
   const handleHeaderStickyToggle = () => {

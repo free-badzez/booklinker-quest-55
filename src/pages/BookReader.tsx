@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -44,6 +44,7 @@ const BookReader = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -75,19 +76,31 @@ const BookReader = () => {
     loadSettings();
   }, [bookId, toast]);
 
+  const scrollToPage = (page: number) => {
+    if (iframeRef.current) {
+      const viewportHeight = window.innerHeight;
+      const scrollPosition = (page - 1) * viewportHeight;
+      
+      const iframeWindow = iframeRef.current.contentWindow;
+      if (iframeWindow) {
+        iframeWindow.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
   const toggleBookmark = (page: number) => {
     try {
       const newBookmarks = bookmarks.includes(page)
         ? bookmarks.filter(b => b !== page)
-        : [...bookmarks, page];
+        : [...bookmarks, page].sort((a, b) => a - b);
       
       setBookmarks(newBookmarks);
       localStorage.setItem(`bookmarks-${bookId}`, JSON.stringify(newBookmarks));
       
-      toast({
-        title: bookmarks.includes(page) ? "Bookmark removed" : "Bookmark added",
-        description: `Page ${page} has been ${bookmarks.includes(page) ? "removed from" : "added to"} bookmarks`,
-      });
+      scrollToPage(page);
     } catch (err) {
       console.error('Error toggling bookmark:', err);
       toast({
@@ -95,6 +108,14 @@ const BookReader = () => {
         description: "Failed to update bookmark. Please try again.",
         variant: "destructive",
       });
+    }
+  };
+
+  const updateCurrentPage = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      localStorage.setItem(`currentPage-${bookId}`, page.toString());
+      scrollToPage(page);
     }
   };
 
@@ -124,13 +145,6 @@ const BookReader = () => {
         title: "Navigation",
         description: `Returned to page ${savedPage}`,
       });
-    }
-  };
-
-  const updateCurrentPage = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      localStorage.setItem(`currentPage-${bookId}`, page.toString());
     }
   };
 
@@ -177,6 +191,7 @@ const BookReader = () => {
             }`}>
               {pdfUrl ? (
                 <iframe
+                  ref={iframeRef}
                   src={pdfUrl}
                   className={`w-full rounded-lg ${
                     viewMode === 'longStrip' ? 'min-h-screen' :
