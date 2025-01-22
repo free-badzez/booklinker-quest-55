@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -44,7 +44,6 @@ const BookReader = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
-  const iframeRef = useRef<HTMLIFrameElement>(null);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -76,21 +75,6 @@ const BookReader = () => {
     loadSettings();
   }, [bookId, toast]);
 
-  const scrollToPage = (page: number) => {
-    if (iframeRef.current) {
-      const viewportHeight = window.innerHeight;
-      const scrollPosition = (page - 1) * viewportHeight;
-      
-      const iframeWindow = iframeRef.current.contentWindow;
-      if (iframeWindow) {
-        iframeWindow.scrollTo({
-          top: scrollPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-  };
-
   const toggleBookmark = (page: number) => {
     try {
       const newBookmarks = bookmarks.includes(page)
@@ -100,7 +84,11 @@ const BookReader = () => {
       setBookmarks(newBookmarks);
       localStorage.setItem(`bookmarks-${bookId}`, JSON.stringify(newBookmarks));
       
-      scrollToPage(page);
+      toast({
+        title: bookmarks.includes(page) ? "Bookmark Removed" : "Bookmark Added",
+        description: `Page ${page} has been ${bookmarks.includes(page) ? "removed from" : "added to"} bookmarks`,
+        duration: 2000,
+      });
     } catch (err) {
       console.error('Error toggling bookmark:', err);
       toast({
@@ -115,7 +103,15 @@ const BookReader = () => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
       localStorage.setItem(`currentPage-${bookId}`, page.toString());
-      scrollToPage(page);
+      
+      // Instead of trying to scroll the iframe directly,
+      // we'll reload it with a specific page parameter
+      const iframe = document.querySelector('iframe');
+      if (iframe) {
+        const currentSrc = iframe.src;
+        const baseUrl = currentSrc.split('#')[0];
+        iframe.src = `${baseUrl}#page=${page}`;
+      }
     }
   };
 
@@ -191,8 +187,7 @@ const BookReader = () => {
             }`}>
               {pdfUrl ? (
                 <iframe
-                  ref={iframeRef}
-                  src={pdfUrl}
+                  src={`${pdfUrl}#page=${currentPage}`}
                   className={`w-full rounded-lg ${
                     viewMode === 'longStrip' ? 'min-h-screen' :
                     viewMode === 'fitBoth' ? 'h-full object-contain' :
