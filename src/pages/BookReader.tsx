@@ -16,7 +16,9 @@ import {
   RefreshCw,
   ChevronDown,
   Sun,
-  Moon
+  Moon,
+  Check,
+  X
 } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/components/ui/use-toast";
@@ -58,9 +60,10 @@ const BookReader = () => {
   const [showBookDetails, setShowBookDetails] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isHeaderSticky, setIsHeaderSticky] = useState(false);
+  const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
   const { toast } = useToast();
 
-  // Mock book details - replace with actual data
   const bookDetails = {
     title: "Project Hail Mary",
     author: "Andy Weir",
@@ -75,22 +78,18 @@ const BookReader = () => {
         setIsLoading(true);
         setError(null);
         
-        // Load saved bookmarks and current page from localStorage
         const savedBookmarks = localStorage.getItem(`bookmarks-${bookId}`);
         const savedPage = localStorage.getItem(`currentPage-${bookId}`);
         const savedTheme = localStorage.getItem('theme');
+        const savedViewMode = localStorage.getItem('viewMode');
+        const savedHeaderSticky = localStorage.getItem('headerSticky');
         
-        if (savedBookmarks) {
-          setBookmarks(JSON.parse(savedBookmarks));
-        }
-        if (savedPage) {
-          setCurrentPage(parseInt(savedPage));
-        }
-        if (savedTheme) {
-          setIsDarkMode(savedTheme === 'dark');
-        }
-
-        // Apply theme
+        if (savedBookmarks) setBookmarks(JSON.parse(savedBookmarks));
+        if (savedPage) setCurrentPage(parseInt(savedPage));
+        if (savedTheme) setIsDarkMode(savedTheme === 'dark');
+        if (savedViewMode) setViewMode(savedViewMode as 'default' | 'longStrip' | 'fitBoth');
+        if (savedHeaderSticky) setIsHeaderSticky(savedHeaderSticky === 'true');
+        
         document.documentElement.classList.toggle('dark', isDarkMode);
         
         setIsLoading(false);
@@ -127,18 +126,40 @@ const BookReader = () => {
     }
   };
 
+  const handleReportError = () => {
+    toast({
+      title: "Error Reported",
+      description: "Thank you for reporting this issue. We'll look into it.",
+    });
+  };
+
+  const toggleHeaderSticky = () => {
+    const newValue = !isHeaderSticky;
+    setIsHeaderSticky(newValue);
+    localStorage.setItem('headerSticky', String(newValue));
+  };
+
+  const changeViewMode = (mode: 'default' | 'longStrip' | 'fitBoth') => {
+    setViewMode(mode);
+    localStorage.setItem('viewMode', mode);
+  };
+
+  const goToLastReadPage = () => {
+    const savedPage = localStorage.getItem(`currentPage-${bookId}`);
+    if (savedPage) {
+      updateCurrentPage(parseInt(savedPage));
+      toast({
+        title: "Navigation",
+        description: `Returned to page ${savedPage}`,
+      });
+    }
+  };
+
   const updateCurrentPage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
       localStorage.setItem(`currentPage-${bookId}`, page.toString());
     }
-  };
-
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
   };
 
   if (isLoading) {
@@ -168,16 +189,15 @@ const BookReader = () => {
   const pdfUrl = bookId ? bookPDFs[bookId as keyof typeof bookPDFs] : null;
 
   return (
-    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-      {/* Header */}
-      <header className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200`}>
+    <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-black' : 'bg-gray-50'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+      <header className={`${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-200'} border-b py-2 px-4 flex items-center justify-between transition-colors duration-200 ${isHeaderSticky ? 'sticky top-0 z-50' : ''}`}>
         <div className="flex items-center space-x-4">
           <Link to="/" className={`${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'}`}>
             <ChevronLeft className="w-6 h-6" />
           </Link>
           <button 
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className={`p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+            className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
           >
             <Menu className="w-5 h-5" />
           </button>
@@ -188,8 +208,8 @@ const BookReader = () => {
         
         <div className="flex items-center space-x-2">
           <button
-            onClick={toggleTheme}
-            className={`p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+            onClick={toggleHeaderSticky}
+            className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
           >
             {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
@@ -200,14 +220,12 @@ const BookReader = () => {
       </header>
 
       <div className="flex">
-        {/* Main Content */}
         <main className="flex-1 p-4">
           <div className="max-w-4xl mx-auto">
-            {/* Navigation Controls */}
             <div className="flex justify-between mb-4">
               <button
                 onClick={() => updateCurrentPage(currentPage - 1)}
-                className={`p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
                 disabled={currentPage === 1}
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -215,24 +233,31 @@ const BookReader = () => {
               
               <button
                 onClick={() => updateCurrentPage(currentPage + 1)}
-                className={`p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
                 disabled={currentPage === totalPages}
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
 
-            {/* PDF Viewer */}
-            <div className="aspect-[3/4] w-full h-[800px] rounded-lg mb-4">
+            <div className={`rounded-lg mb-4 ${
+              viewMode === 'longStrip' ? 'h-auto' : 
+              viewMode === 'fitBoth' ? 'h-screen' : 
+              'aspect-[3/4] h-[800px]'
+            }`}>
               {pdfUrl ? (
                 <iframe
                   src={pdfUrl}
-                  className="w-full h-full rounded-lg"
+                  className={`w-full rounded-lg ${
+                    viewMode === 'longStrip' ? 'min-h-screen' :
+                    viewMode === 'fitBoth' ? 'h-full object-contain' :
+                    'h-full'
+                  }`}
                   allow="autoplay"
                   loading="lazy"
                 ></iframe>
               ) : (
-                <div className={`w-full h-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-lg flex items-center justify-center`}>
+                <div className={`w-full h-full ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-lg flex items-center justify-center`}>
                   <p className="text-center p-8">PDF not available</p>
                 </div>
               )}
@@ -240,99 +265,98 @@ const BookReader = () => {
           </div>
         </main>
 
-        {/* Sidebar */}
         {isSidebarOpen && (
-          <ScrollArea className={`w-64 ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-200'} border-l p-4 space-y-4 transition-colors duration-200`}>
+          <ScrollArea className={`w-64 ${isDarkMode ? 'bg-gray-900 border-gray-800' : 'bg-gray-100 border-gray-200'} border-l p-4 space-y-4 transition-colors duration-200`}>
             <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>you are reading</div>
             <div className="font-medium">by chapter</div>
             
             <div className="space-y-2">
-              <button 
+              <motion.button 
                 onClick={() => updateCurrentPage(currentPage)}
-                className={`w-full flex items-center justify-between p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                className={`w-full flex items-center justify-between p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
               >
                 <span>Chapter {currentPage}</span>
                 <ChevronDown className="w-4 h-4" />
-              </button>
+              </motion.button>
               
-              <button 
+              <motion.button 
                 onClick={() => updateCurrentPage(currentPage)}
-                className={`w-full flex items-center justify-between p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                className={`w-full flex items-center justify-between p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
               >
                 <span>Page {currentPage}</span>
                 <ChevronDown className="w-4 h-4" />
-              </button>
+              </motion.button>
             </div>
 
             <div className="space-y-2">
-              <button 
+              <motion.button 
                 onClick={() => toggleBookmark(currentPage)}
-                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
               >
                 <BookMarked className={`w-4 h-4 ${bookmarks.includes(currentPage) ? 'text-yellow-500' : ''}`} />
                 <span>Bookmark</span>
-              </button>
+                {bookmarks.includes(currentPage) && <Check className="w-4 h-4 ml-auto text-green-500" />}
+              </motion.button>
               
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
-                <MessageSquare className="w-4 h-4" />
-                <span>Chapter {currentPage} Comment</span>
-              </button>
-              
-              <button 
-                onClick={() => setShowBookDetails(!showBookDetails)}
-                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+              <motion.button 
+                onClick={handleReportError}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
               >
-                <Info className="w-4 h-4" />
-                <span>Book Detail</span>
-              </button>
-              
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
                 <AlertTriangle className="w-4 h-4" />
                 <span>Report Error</span>
-              </button>
-            </div>
-
-            {showBookDetails && (
-              <div className={`p-4 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'} rounded-lg space-y-2`}>
-                <h3 className="font-bold">{bookDetails.title}</h3>
-                <p className="text-sm">By {bookDetails.author}</p>
-                <p className="text-sm">{bookDetails.description}</p>
-                <p className="text-sm">Published: {bookDetails.publishedYear}</p>
-                <p className="text-sm">Genre: {bookDetails.genre}</p>
-              </div>
-            )}
-
-            <div className={`space-y-2 pt-4 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
+              </motion.button>
+              
+              <motion.button 
+                onClick={toggleHeaderSticky}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
+              >
                 <MonitorUp className="w-4 h-4" />
                 <span>Header Sticky</span>
-              </button>
+                {isHeaderSticky ? <Check className="w-4 h-4 ml-auto text-green-500" /> : <X className="w-4 h-4 ml-auto text-gray-500" />}
+              </motion.button>
               
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
+              <motion.button 
+                onClick={() => changeViewMode('longStrip')}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
+              >
                 <LayoutTemplate className="w-4 h-4" />
                 <span>Long Strip</span>
-              </button>
+                {viewMode === 'longStrip' && <Check className="w-4 h-4 ml-auto text-green-500" />}
+              </motion.button>
               
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
+              <motion.button 
+                onClick={() => changeViewMode('fitBoth')}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
+              >
                 <MoveHorizontal className="w-4 h-4" />
                 <span>Fit Both</span>
-              </button>
+                {viewMode === 'fitBoth' && <Check className="w-4 h-4 ml-auto text-green-500" />}
+              </motion.button>
               
-              <button className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}>
+              <motion.button 
+                onClick={goToLastReadPage}
+                className={`w-full flex items-center space-x-2 p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded transition-colors duration-200`}
+                whileTap={{ scale: 0.95 }}
+              >
                 <ArrowDownToLine className="w-4 h-4" />
                 <span>Bottom Progress</span>
-              </button>
+              </motion.button>
             </div>
 
             {bookmarks.length > 0 && (
-              <div className={`pt-4 border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <div className={`pt-4 border-t ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}>
                 <h3 className="text-sm font-medium mb-2">Bookmarks</h3>
                 <div className="space-y-1">
                   {bookmarks.map((page, index) => (
                     <button
                       key={index}
                       onClick={() => updateCurrentPage(page)}
-                      className={`w-full text-left p-2 ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'} rounded text-sm transition-colors duration-200`}
+                      className={`w-full text-left p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded text-sm transition-colors duration-200`}
                     >
                       Page {page}
                     </button>
