@@ -39,8 +39,7 @@ const BookReader = () => {
     author: "Andy Weir",
     description: "A lone astronaut must save the earth from disaster in this incredible new science-based thriller from the #1 New York Times bestselling author of The Martian.",
     publishedYear: 2021,
-    genre: "Science Fiction",
-    driveLink: "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/view?usp=drive_link"
+    genre: "Science Fiction"
   };
 
   useEffect(() => {
@@ -66,12 +65,6 @@ const BookReader = () => {
 
         // Apply theme
         document.documentElement.classList.toggle('dark', isDarkMode);
-        
-        // Load PDF from Drive
-        const iframe = document.getElementById('pdf-viewer') as HTMLIFrameElement;
-        if (iframe) {
-          iframe.src = bookDetails.driveLink;
-        }
         
         setIsLoading(false);
       } catch (err) {
@@ -201,14 +194,8 @@ const BookReader = () => {
             </div>
 
             {/* PDF Viewer */}
-            <div className={`aspect-[3/4] ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-lg mb-4 overflow-hidden`}>
-              <iframe
-                id="pdf-viewer"
-                src={bookDetails.driveLink}
-                className="w-full h-full border-0"
-                title="PDF Viewer"
-                allowFullScreen
-              />
+            <div className={`aspect-[3/4] ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-lg mb-4 flex items-center justify-center transition-colors duration-200`}>
+              <p className="text-center p-8">PDF Viewer will be implemented here</p>
             </div>
           </div>
         </main>
