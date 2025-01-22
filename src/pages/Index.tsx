@@ -232,20 +232,22 @@ const Index = () => {
         >
           {/* Menu Button */}
           <div className="absolute right-4 top-0 z-10">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <Menu className="h-5 w-5" />
-                </Button>
-                <DropdownMenuItem onClick={() => (window.location.href = "https://mcqgenrator.netlify.app/")}>
-                  MCQ Generator
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
-                  Pomodoro Timer
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <Button variant="outline" size="icon">
+        <Menu className="h-5 w-5" />
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent>
+      <DropdownMenuItem onClick={() => (window.location.href = "https://mcqgenrator.netlify.app/")}>
+        MCQ Generator
+      </DropdownMenuItem>
+      <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
+        Pomodoro Timer
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+</div>
 
           <header className="text-center mb-12">
             <motion.h1
