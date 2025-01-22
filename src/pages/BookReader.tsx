@@ -21,6 +21,33 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/components/ui/use-toast";
 
+const bookPDFs = {
+  "a-memory-called-empire": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "project-hail-mary": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "dune": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "foundation": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "three-body-problem": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "neuromancer": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "snow-crash": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "red-rising": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "hyperion": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "left-hand-of-darkness": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "children-of-time": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "rich-dad-poor-dad": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "psychology-of-money": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "atomic-habits": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "think-and-grow-rich": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "7-habits": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "how-to-win-friends": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "power-of-now": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "the-alchemist": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "subtle-art": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "4-hour-work-week": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "mindset": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "deep-work": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "compound-effect": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview"
+};
+
 const BookReader = () => {
   const { bookId } = useParams();
   const [bookmarks, setBookmarks] = useState<number[]>([]);
@@ -138,6 +165,8 @@ const BookReader = () => {
     );
   }
 
+  const pdfUrl = bookId ? bookPDFs[bookId as keyof typeof bookPDFs] : null;
+
   return (
     <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
       {/* Header */}
@@ -194,8 +223,19 @@ const BookReader = () => {
             </div>
 
             {/* PDF Viewer */}
-            <div className={`aspect-[3/4] ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-lg mb-4 flex items-center justify-center transition-colors duration-200`}>
-              <p className="text-center p-8">PDF Viewer will be implemented here</p>
+            <div className="aspect-[3/4] w-full h-[800px] rounded-lg mb-4">
+              {pdfUrl ? (
+                <iframe
+                  src={pdfUrl}
+                  className="w-full h-full rounded-lg"
+                  allow="autoplay"
+                  loading="lazy"
+                ></iframe>
+              ) : (
+                <div className={`w-full h-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-lg flex items-center justify-center`}>
+                  <p className="text-center p-8">PDF not available</p>
+                </div>
+              )}
             </div>
           </div>
         </main>
