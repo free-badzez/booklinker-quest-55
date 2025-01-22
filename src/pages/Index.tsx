@@ -239,10 +239,10 @@ const Index = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => navigate("/mcq-generator")}>
+                <DropdownMenuItem onClick={() => navigate("https://mcqgenrator.netlify.app/")}>
                   MCQ Generator
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => navigate("/pomodoro")}>
+                <DropdownMenuItem onClick={() => navigate("https://calm-tapioca-eab340.netlify.app/")}>
                   Pomodoro Timer
                 </DropdownMenuItem>
               </DropdownMenuContent>
