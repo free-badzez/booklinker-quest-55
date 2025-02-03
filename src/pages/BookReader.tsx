@@ -32,7 +32,8 @@ const bookPDFs = {
   "4-hour-work-week": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
   "mindset": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
   "deep-work": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
-  "compound-effect": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview" };
+  "compound-effect": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview"
+};
 
 const BookReader = () => {
   const { bookId } = useParams();
@@ -103,6 +104,8 @@ const BookReader = () => {
       setCurrentPage(page);
       localStorage.setItem(`currentPage-${bookId}`, page.toString());
       
+      // Instead of trying to scroll the iframe directly,
+      // we'll reload it with a specific page parameter
       const iframe = document.querySelector('iframe');
       if (iframe) {
         const currentSrc = iframe.src;
@@ -157,13 +160,75 @@ const BookReader = () => {
       <div className="flex">
         <main className="flex-1 p-4">
           <div className="max-w-4xl mx-auto">
-            {/* Content goes here */}
+            <div className="flex justify-between mb-4">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => updateCurrentPage(currentPage - 1)}
+                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+                disabled={currentPage === 1}
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </motion.button>
+              
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => updateCurrentPage(currentPage + 1)}
+                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
+                disabled={currentPage === totalPages}
+              >
+                <ChevronRight className="w-6 h-6" />
+              </motion.button>
+            </div>
+
+            <div className={`rounded-lg mb-4 ${
+              viewMode === 'longStrip' ? 'h-auto' : 
+              viewMode === 'fitBoth' ? 'h-screen' : 
+              'aspect-[3/4] h-[800px]'
+            }`}>
+              {pdfUrl ? (
+                <iframe
+                  src={`${pdfUrl}#page=${currentPage}`}
+                  className={`w-full rounded-lg ${
+                    viewMode === 'longStrip' ? 'min-h-screen' :
+                    viewMode === 'fitBoth' ? 'h-full object-contain' :
+                    'h-full'
+                  }`}
+                  allow="autoplay"
+                  loading="lazy"
+                ></iframe>
+              ) : (
+                <div className={`w-full h-full ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-lg flex items-center justify-center`}>
+                  <p className="text-center p-8">PDF not available</p>
+                </div>
+              )}
+            </div>
           </div>
         </main>
+
+        {isSidebarOpen && (
+          <ScrollArea className={`w-64 ${isDarkMode ? 'bg-black border-gray-800' : 'bg-gray-100 border-gray-200'} border-l p-4 space-y-4 transition-colors duration-200`}>
+            <ReaderControls 
+              currentPage={currentPage}
+              bookmarks={bookmarks}
+              isDarkMode={isDarkMode}
+              isHeaderSticky={isHeaderSticky}
+              viewMode={viewMode}
+              toggleBookmark={toggleBookmark}
+              toggleHeaderSticky={toggleHeaderSticky}
+              changeViewMode={changeViewMode}
+              goToLastReadPage={goToLastReadPage}
+            />
+            
+            <BookmarksList 
+              bookmarks={bookmarks}
+              updateCurrentPage={updateCurrentPage}
+              isDarkMode={isDarkMode}
+            />
+          </ScrollArea>
+        )}
       </div>
     </div>
   );
 };
 
 export default BookReader;
-
