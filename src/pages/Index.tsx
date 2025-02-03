@@ -17,7 +17,7 @@ const books = [
     id: 1,
     title: "A Memory Called Empire",
     author: "Arkady Martine",
-    cover: "/lovable-uploads/2a335f2f-468b-443b-a696-6db4096ef4ba.png",
+    cover: "https://img.chirpbooks.com/image/upload/f_auto,q_auto:low,w_660,h_660/v1651605790/cover_images/macmillan/9781250318954.jpg",
     link: "/reader/a-memory-called-empire",
     driveLink: "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/view?usp=sharing" // Add your Google Drive link here
   },
