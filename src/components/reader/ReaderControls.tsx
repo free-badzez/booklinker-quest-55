@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { 
   BookMarked, 
@@ -6,8 +7,6 @@ import {
   LayoutTemplate, 
   MoveHorizontal, 
   ArrowDownToLine,
-  ZoomIn,
-  ZoomOut,
   Check,
   X
 } from "lucide-react";
@@ -23,8 +22,6 @@ interface ReaderControlsProps {
   toggleHeaderSticky: () => void;
   changeViewMode: (mode: 'default' | 'longStrip' | 'fitBoth') => void;
   goToLastReadPage: () => void;
-  zoomIn: () => void;
-  zoomOut: () => void;
 }
 
 export const ReaderControls = ({
@@ -37,8 +34,6 @@ export const ReaderControls = ({
   toggleHeaderSticky,
   changeViewMode,
   goToLastReadPage,
-  zoomIn,
-  zoomOut,
 }: ReaderControlsProps) => {
   const { toast } = useToast();
 
@@ -81,24 +76,6 @@ export const ReaderControls = ({
     });
   };
 
-  const handleZoomIn = () => {
-    zoomIn();
-    toast({
-      title: "Zoom In",
-      description: "Page zoomed in",
-      duration: 1500,
-    });
-  };
-
-  const handleZoomOut = () => {
-    zoomOut();
-    toast({
-      title: "Zoom Out",
-      description: "Page zoomed out",
-      duration: 1500,
-    });
-  };
-
   return (
     <div className="space-y-2">
       <motion.button 
@@ -112,30 +89,6 @@ export const ReaderControls = ({
         <span>Bookmark</span>
         {bookmarks.includes(currentPage) && <Check className="w-4 h-4 ml-auto text-green-500" />}
       </motion.button>
-
-      <div className="flex gap-2">
-        <motion.button 
-          onClick={handleZoomIn}
-          className={`flex-1 flex items-center justify-center space-x-2 p-2 ${
-            isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
-          } rounded transition-colors duration-200`}
-          whileTap={{ scale: 0.95 }}
-        >
-          <ZoomIn className="w-4 h-4" />
-          <span>Zoom In</span>
-        </motion.button>
-
-        <motion.button 
-          onClick={handleZoomOut}
-          className={`flex-1 flex items-center justify-center space-x-2 p-2 ${
-            isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'
-          } rounded transition-colors duration-200`}
-          whileTap={{ scale: 0.95 }}
-        >
-          <ZoomOut className="w-4 h-4" />
-          <span>Zoom Out</span>
-        </motion.button>
-      </div>
       
       <motion.button 
         onClick={handleReportError}

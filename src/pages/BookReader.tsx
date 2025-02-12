@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -45,7 +44,6 @@ const BookReader = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
-  const [zoom, setZoom] = useState(100);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -106,8 +104,6 @@ const BookReader = () => {
       setCurrentPage(page);
       localStorage.setItem(`currentPage-${bookId}`, page.toString());
       
-      // Instead of trying to scroll the iframe directly,
-      // we'll reload it with a specific page parameter
       const iframe = document.querySelector('iframe');
       if (iframe) {
         const currentSrc = iframe.src;
@@ -144,14 +140,6 @@ const BookReader = () => {
         description: `Returned to page ${savedPage}`,
       });
     }
-  };
-
-  const handleZoomIn = () => {
-    setZoom(prev => Math.min(prev + 10, 200));
-  };
-
-  const handleZoomOut = () => {
-    setZoom(prev => Math.max(prev - 10, 50));
   };
 
   const pdfUrl = bookId ? bookPDFs[bookId as keyof typeof bookPDFs] : null;
@@ -191,30 +179,20 @@ const BookReader = () => {
             </div>
 
             <div 
-              className={`relative rounded-lg mb-4 overflow-auto ${
+              className={`relative rounded-lg mb-4 ${
                 viewMode === 'longStrip' ? 'h-auto' : 
                 viewMode === 'fitBoth' ? 'h-[calc(100vh-12rem)]' : 
-                'aspect-[3/4] h-[800px]'
+                'h-[calc(100vh-12rem)]'
               }`}
-              style={{
-                maxHeight: viewMode === 'longStrip' ? 'none' : 'calc(100vh - 12rem)',
-              }}
             >
               {pdfUrl ? (
                 <iframe
-                  src={`${pdfUrl}#page=${currentPage}&zoom=${zoom}`}
+                  src={`${pdfUrl}#page=${currentPage}`}
                   className={`w-full h-full rounded-lg ${
                     viewMode === 'longStrip' ? 'min-h-screen' :
                     viewMode === 'fitBoth' ? 'object-contain' :
-                    ''
+                    'object-contain'
                   }`}
-                  style={{
-                    transform: `scale(${zoom / 100})`,
-                    transformOrigin: 'top left',
-                    width: `${(100 * 100) / zoom}%`,
-                    height: viewMode === 'longStrip' ? '100%' : `${(100 * 100) / zoom}%`,
-                    transition: 'transform 0.2s ease-in-out',
-                  }}
                   allow="autoplay fullscreen"
                   loading="lazy"
                   title="PDF Reader"
@@ -240,8 +218,6 @@ const BookReader = () => {
               toggleHeaderSticky={toggleHeaderSticky}
               changeViewMode={changeViewMode}
               goToLastReadPage={goToLastReadPage}
-              zoomIn={handleZoomIn}
-              zoomOut={handleZoomOut}
             />
             
             <BookmarksList 
