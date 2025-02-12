@@ -119,7 +119,7 @@ const BookReader = () => {
   };
 
   const changeViewMode = (mode: 'default' | 'longStrip' | 'fitBoth') => {
-    setViewMode(mode);
+    setViewMode(prev => prev === mode ? 'default' : mode);
     localStorage.setItem('viewMode', mode);
   };
 
@@ -169,24 +169,23 @@ const BookReader = () => {
         toggleDarkMode={toggleDarkMode}
       />
 
-      <div className="flex">
+      <div className="flex h-[calc(100vh-3.5rem)]">
         <main className="flex-1 p-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto h-full">
             <div 
-              className={`relative rounded-lg mb-4 ${
-                viewMode === 'longStrip' ? 'h-auto' : 
-                viewMode === 'fitBoth' ? 'h-[calc(100vh-12rem)]' : 
-                'h-[calc(100vh-12rem)]'
+              className={`relative rounded-lg h-full ${
+                viewMode === 'longStrip' ? 'overflow-auto' : 
+                'overflow-hidden'
               }`}
             >
               {pdfUrl ? (
                 <iframe
                   ref={iframeRef}
                   src={`${pdfUrl}#page=${currentPage}`}
-                  className={`w-full h-full rounded-lg ${
+                  className={`w-full rounded-lg ${
                     viewMode === 'longStrip' ? 'min-h-screen' :
-                    viewMode === 'fitBoth' ? 'object-contain' :
-                    'object-contain'
+                    viewMode === 'fitBoth' ? 'h-full object-contain' :
+                    'h-full object-contain'
                   }`}
                   allow="autoplay fullscreen"
                   loading="lazy"

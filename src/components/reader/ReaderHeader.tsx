@@ -39,9 +39,6 @@ export const ReaderHeader = ({
         >
           <Menu className="w-5 h-5" />
         </motion.button>
-        <div className="text-sm">
-          Page {currentPage}/{totalPages}
-        </div>
       </div>
       
       <motion.button
