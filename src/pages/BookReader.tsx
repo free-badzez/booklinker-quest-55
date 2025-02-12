@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
 import { ReaderHeader } from "@/components/reader/ReaderHeader";
@@ -45,6 +43,7 @@ const BookReader = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
   const { toast } = useToast();
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     const loadSettings = () => {
@@ -144,6 +143,21 @@ const BookReader = () => {
 
   const pdfUrl = bookId ? bookPDFs[bookId as keyof typeof bookPDFs] : null;
 
+  useEffect(() => {
+    const handleScroll = (event: MessageEvent) => {
+      if (event.data && event.data.type === 'pdf-scroll') {
+        const newPage = Math.ceil(event.data.scrollTop / event.data.pageHeight) + 1;
+        if (newPage !== currentPage && newPage >= 1 && newPage <= totalPages) {
+          setCurrentPage(newPage);
+          localStorage.setItem(`currentPage-${bookId}`, newPage.toString());
+        }
+      }
+    };
+
+    window.addEventListener('message', handleScroll);
+    return () => window.removeEventListener('message', handleScroll);
+  }, [currentPage, totalPages, bookId]);
+
   return (
     <div className={`min-h-screen transition-colors duration-200 ${isDarkMode ? 'bg-black' : 'bg-gray-50'} ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
       <ReaderHeader 
@@ -158,26 +172,6 @@ const BookReader = () => {
       <div className="flex">
         <main className="flex-1 p-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between mb-4">
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => updateCurrentPage(currentPage - 1)}
-                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
-                disabled={currentPage === 1}
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </motion.button>
-              
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => updateCurrentPage(currentPage + 1)}
-                className={`p-2 ${isDarkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-200'} rounded-lg transition-colors duration-200`}
-                disabled={currentPage === totalPages}
-              >
-                <ChevronRight className="w-6 h-6" />
-              </motion.button>
-            </div>
-
             <div 
               className={`relative rounded-lg mb-4 ${
                 viewMode === 'longStrip' ? 'h-auto' : 
@@ -187,6 +181,7 @@ const BookReader = () => {
             >
               {pdfUrl ? (
                 <iframe
+                  ref={iframeRef}
                   src={`${pdfUrl}#page=${currentPage}`}
                   className={`w-full h-full rounded-lg ${
                     viewMode === 'longStrip' ? 'min-h-screen' :

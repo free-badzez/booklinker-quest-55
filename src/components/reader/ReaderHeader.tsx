@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { ChevronLeft, Menu, Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
@@ -39,7 +40,7 @@ export const ReaderHeader = ({
           <Menu className="w-5 h-5" />
         </motion.button>
         <div className="text-sm">
-          Chapter {currentPage}/{totalPages}
+          Page {currentPage}/{totalPages}
         </div>
       </div>
       
