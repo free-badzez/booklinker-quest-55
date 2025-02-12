@@ -13,7 +13,7 @@ const bookPDFs = {
   "foundation": "https://drive.google.com/file/d/1FjL_zfkabyTXemqH0aQUXT7nrKb66PBE/view",
   "three-body-problem": "https://drive.google.com/file/d/1-_AYOmaz3P9TpRsfpvfCm1JrAtW_1IaM/view",
   "neuromancer": "https://drive.google.com/file/d/14mhlIpI1yMWvDtsuk_e6M_x24RnZC4uk/view",
-    "snow-crash": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "snow-crash": "https://drive.google.com/file/d/1jWu7BC5nzSNf0gU2uAjKGYULVQCaa0pP/view",
     "red-rising": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
   "hyperion": "https://drive.google.com/file/d/1NhnW_HP2X1d-EW0NVx1_ca4b2B_BgccC/view",
   "left-hand-of-darkness": "https://drive.google.com/file/d/1mGZCndwCHQlRqjiLzaXybvcQESEWVXby/view",
