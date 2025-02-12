@@ -44,6 +44,7 @@ const BookReader = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [viewMode, setViewMode] = useState<'default' | 'longStrip' | 'fitBoth'>('default');
+  const [zoom, setZoom] = useState(100);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -144,6 +145,14 @@ const BookReader = () => {
     }
   };
 
+  const handleZoomIn = () => {
+    setZoom(prev => Math.min(prev + 10, 200));
+  };
+
+  const handleZoomOut = () => {
+    setZoom(prev => Math.max(prev - 10, 50));
+  };
+
   const pdfUrl = bookId ? bookPDFs[bookId as keyof typeof bookPDFs] : null;
 
   return (
@@ -158,7 +167,7 @@ const BookReader = () => {
       />
 
       <div className="flex">
-        <main className="flex-1 p-4">
+        <main className="flex-1 p-4 overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-between mb-4">
               <motion.button
@@ -180,22 +189,24 @@ const BookReader = () => {
               </motion.button>
             </div>
 
-            <div className={`rounded-lg mb-4 ${
+            <div className={`rounded-lg mb-4 overflow-auto ${
               viewMode === 'longStrip' ? 'h-auto' : 
               viewMode === 'fitBoth' ? 'h-screen' : 
               'aspect-[3/4] h-[800px]'
             }`}>
               {pdfUrl ? (
-                <iframe
-                  src={`${pdfUrl}#page=${currentPage}`}
-                  className={`w-full rounded-lg ${
-                    viewMode === 'longStrip' ? 'min-h-screen' :
-                    viewMode === 'fitBoth' ? 'h-full object-contain' :
-                    'h-full'
-                  }`}
-                  allow="autoplay"
-                  loading="lazy"
-                ></iframe>
+                <div style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'top left', transition: 'transform 0.2s ease-in-out' }}>
+                  <iframe
+                    src={`${pdfUrl}#page=${currentPage}`}
+                    className={`w-full rounded-lg ${
+                      viewMode === 'longStrip' ? 'min-h-screen' :
+                      viewMode === 'fitBoth' ? 'h-full object-contain' :
+                      'h-full'
+                    }`}
+                    allow="autoplay"
+                    loading="lazy"
+                  ></iframe>
+                </div>
               ) : (
                 <div className={`w-full h-full ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded-lg flex items-center justify-center`}>
                   <p className="text-center p-8">PDF not available</p>
@@ -217,6 +228,8 @@ const BookReader = () => {
               toggleHeaderSticky={toggleHeaderSticky}
               changeViewMode={changeViewMode}
               goToLastReadPage={goToLastReadPage}
+              zoomIn={handleZoomIn}
+              zoomOut={handleZoomOut}
             />
             
             <BookmarksList 
