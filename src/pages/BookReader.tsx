@@ -29,7 +29,7 @@ const bookPDFs = {
   "subtle-art": "https://drive.google.com/file/d/1l1-YxSel33eSTIOdYkZlWDE45BslH4oK/view",
   "4-hour-work-week": "https://drive.google.com/file/d/1b4vBh1rJT8ujt5EbDj-GvIQlXW8TqHJs/view",
   "mindset": "https://drive.google.com/file/d/1dOM2xQdutXKSN6R1xuUdWZNngl4n0Mu9/view",
-  "deep-work": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
+  "deep-work": "https://drive.google.com/file/d/1ljUjMbYjEZWeVH5P5y3FxNfnRtV9FY4W/view",
   "compound-effect": "https://drive.google.com/file/d/1EHaDB8tQ70ZYLOT8HM-A08Szn4bc8ZmO/view"
 };
 
