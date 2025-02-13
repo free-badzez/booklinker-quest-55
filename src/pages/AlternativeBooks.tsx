@@ -9,77 +9,66 @@ const books = [
     title: "A Memory Called Empire",
     author: "Arkady Martine",
     cover: "https://m.media-amazon.com/images/I/81EbhzfWY5L._AC_UF1000,1000_QL80_.jpg",
-    link: "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/view?usp=sharing"
   },
   {
     id: 2,
     title: "Project Hail Mary",
     author: "Andy Weir",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597695864i/54493401.jpg",
-    link: "https://www.goodreads.com/book/show/54493401-project-hail-mary"
   },
   {
     id: 3,
     title: "Dune",
     author: "Frank Herbert",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
-    link: "https://www.goodreads.com/book/show/44767458-dune"
   },
   {
     id: 4,
     title: "Foundation",
     author: "Isaac Asimov",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1417900846i/29579.jpg",
-    link: "https://www.goodreads.com/book/show/29579.Foundation"
   },
   {
     id: 5,
     title: "The Three-Body Problem",
     author: "Liu Cixin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
-    link: "https://www.goodreads.com/book/show/20518872-the-three-body-problem"
   },
   {
     id: 6,
     title: "Neuromancer",
     author: "William Gibson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
-    link: "https://www.goodreads.com/book/show/6088007-neuromancer"
   },
   {
     id: 7,
     title: "Snow Crash",
     author: "Neal Stephenson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589842551i/40651883.jpg",
-    link: "https://www.goodreads.com/book/show/40651883-snow-crash"
   },
   {
     id: 8,
     title: "Red Rising",
     author: "Pierce Brown",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1461354651i/15839976.jpg",
-    link: "https://www.goodreads.com/book/show/15839976-red-rising"
   },
   {
     id: 9,
     title: "Hyperion",
     author: "Dan Simmons",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405546838i/77566.jpg",
-    link: "https://www.goodreads.com/book/show/77566.Hyperion"
   },
   {
     id: 10,
     title: "The Left Hand of Darkness",
     author: "Ursula K. Le Guin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488213612i/18423.jpg",
-    link: "https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness"
   },
   {
     id: 11,
     title: "Children of Time",
     author: "Adrian Tchaikovsky",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
-    link: "https://www.goodreads.com/book/show/25499718-children-of-time"
+    cover: "https://m.media-amazon.com/images/I/81Xb8fFEkwL.jpg",
   }
 ];
 
