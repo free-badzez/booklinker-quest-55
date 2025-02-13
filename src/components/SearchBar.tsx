@@ -17,7 +17,7 @@ const SearchBar = ({ onSearch }: { onSearch: (query: string) => void }) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search books by title or author..."
-          className="w-full px-5 py-3 bg-white rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-base shadow-sm"
+          className="w-full px-5 py-3 bg-white rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 text-base shadow-sm text-black"
         />
         <button
           type="submit"
