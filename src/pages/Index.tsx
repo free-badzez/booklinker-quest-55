@@ -525,14 +525,14 @@ const books = [
     link: "/reader/the-da-vinci-code",
     driveLink: ""
 },
-  {
+ {
     id: 65,
-    title: "Sapiens: A Brief History of Humankind",
-    author: "Yuval Noah Harari",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
-    link: "/reader/sapiens",
-    driveLink: ""
-},
+    title: "Dune",
+    author: "Frank Herbert",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
+    link: "/reader/dune",
+    driveLink: "" // Add your Google Drive link here
+  },
   {
     id: 66,
     title: "The Martian",
