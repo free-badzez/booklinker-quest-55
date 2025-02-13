@@ -85,14 +85,14 @@ const books = [
     link: "/reader/hyperion",
     driveLink: "" // Add your Google Drive link here
   },
-  {
+{
     id: 10,
-    title: "The Left Hand of Darkness",
-    author: "Ursula K. Le Guin",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488213612i/18423.jpg",
-    link: "/reader/left-hand-of-darkness",
-    driveLink: "" // Add your Google Drive link here
-  },
+    title: "Harry Potter and the Sorcerer’s Stone",
+    author: "J.K. Rowling",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170803558i/3.jpg",
+    link: "/reader/harry-potter-sorcerers-stone",
+    driveLink: ""
+},
   {
     id: 11,
     title: "Children of Time",
@@ -415,12 +415,12 @@ const books = [
 },
 {
     id: 51,
-    title: "Harry Potter and the Sorcerer’s Stone",
-    author: "J.K. Rowling",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170803558i/3.jpg",
-    link: "/reader/harry-potter-sorcerers-stone",
-    driveLink: ""
-},
+    title: "The Left Hand of Darkness",
+    author: "Ursula K. Le Guin",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1488213612i/18423.jpg",
+    link: "/reader/left-hand-of-darkness",
+    driveLink: "" // Add your Google Drive link here
+  },
 {
     id: 52,
     title: "A Game of Thrones",
