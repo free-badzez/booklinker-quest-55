@@ -36,7 +36,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
     link: "/reader/sapiens",
     driveLink: ""
-},
+  },
   {
     id: 4,
     title: "Foundation",
@@ -85,14 +85,14 @@ const books = [
     link: "/reader/hyperion",
     driveLink: "" // Add your Google Drive link here
   },
-{
+  {
     id: 10,
     title: "Harry Potter and the Sorcerer’s Stone",
     author: "J.K. Rowling",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170803558i/3.jpg",
     link: "/reader/harry-potter-sorcerers-stone",
     driveLink: ""
-},
+  },
   {
     id: 11,
     title: "Children of Time",
@@ -364,7 +364,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348431838i/13525945.jpg",
     link: "/reader/so-good-they-cant-ignore-you",
     driveLink: ""
-},
+  },
   {
     id: 45,
     title: "1984",
@@ -372,23 +372,23 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1532714506i/5470.jpg",
     link: "/reader/1984",
     driveLink: ""
-},
-{
+  },
+  {
     id: 46,
     title: "Brave New World",
     author: "Aldous Huxley",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575509280i/5129.jpg",
     link: "/reader/brave-new-world",
     driveLink: ""
-},
-{
+  },
+  {
     id: 47,
     title: "The Hitchhiker’s Guide to the Galaxy",
     author: "Douglas Adams",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1559986151i/11.jpg",
     link: "/reader/hitchhikers-guide",
     driveLink: ""
-},
+  },
   {
     id: 48,
     title: "Fahrenheit 451",
@@ -396,24 +396,24 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1383718290i/13079982.jpg",
     link: "/reader/fahrenheit-451",
     driveLink: ""
-},
-{
+  },
+  {
     id: 49,
     title: "The Lord of the Rings",
     author: "J.R.R. Tolkien",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg",
     link: "/reader/lord-of-the-rings",
     driveLink: ""
-},
-{
+  },
+  {
     id: 50,
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1372847500i/5907.jpg",
     link: "/reader/the-hobbit",
     driveLink: ""
-},
-{
+  },
+  {
     id: 51,
     title: "The Left Hand of Darkness",
     author: "Ursula K. Le Guin",
@@ -421,22 +421,22 @@ const books = [
     link: "/reader/left-hand-of-darkness",
     driveLink: "" // Add your Google Drive link here
   },
-{
+  {
     id: 52,
     title: "A Game of Thrones",
     author: "George R.R. Martin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1562726235i/13496.jpg",
     link: "/reader/game-of-thrones",
     driveLink: ""
-},
-{
+  },
+  {
     id: 53,
     title: "The Name of the Wind",
     author: "Patrick Rothfuss",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1629135994i/186074.jpg",
     link: "/reader/name-of-the-wind",
     driveLink: ""
-},
+  },
   {
     id: 54,
     title: "To Kill a Mockingbird",
@@ -444,87 +444,87 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg",
     link: "/reader/to-kill-a-mockingbird",
     driveLink: ""
-},
-{
+  },
+  {
     id: 55,
     title: "Pride and Prejudice",
     author: "Jane Austen",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320399351i/1885.jpg",
     link: "/reader/pride-and-prejudice",
     driveLink: ""
-},
-{
+  },
+  {
     id: 56,
     title: "Crime and Punishment",
     author: "Fyodor Dostoevsky",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1382846449i/7144.jpg",
     link: "/reader/crime-and-punishment",
     driveLink: ""
-},
-{
+  },
+  {
     id: 57,
     title: "The Catcher in the Rye",
     author: "J.D. Salinger",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1398034300i/5107.jpg",
     link: "/reader/the-catcher-in-the-rye",
     driveLink: ""
-},
-{
+  },
+  {
     id: 58,
     title: "Dracula",
     author: "Bram Stoker",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387151694i/17245.jpg",
     link: "/reader/dracula",
     driveLink: ""
-},
-{
+  },
+  {
     id: 59,
     title: "Frankenstein",
     author: "Mary Shelley",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1381512375i/35031085.jpg",
     link: "/reader/frankenstein",
     driveLink: ""
-},
-{
+  },
+  {
     id: 60,
     title: "The Shining",
     author: "Stephen King",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353277730i/11588.jpg",
     link: "/reader/the-shining",
     driveLink: ""
-},
-{
+  },
+  {
     id: 61,
     title: "It",
     author: "Stephen King",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1334416842i/830502.jpg",
     link: "/reader/it",
     driveLink: ""
-},
-{
+  },
+  {
     id: 62,
     title: "And Then There Were None",
     author: "Agatha Christie",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1638425884i/16299.jpg",
     link: "/reader/and-then-there-were-none",
     driveLink: ""
-},
-{
+  },
+  {
     id: 63,
     title: "The Girl with the Dragon Tattoo",
     author: "Stieg Larsson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327868566i/2429135.jpg",
     link: "/reader/the-girl-with-the-dragon-tattoo",
     driveLink: ""
-},
-{
+  },
+  {
     id: 64,
     title: "The Da Vinci Code",
     author: "Dan Brown",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1579621266i/968.jpg",
     link: "/reader/the-da-vinci-code",
     driveLink: ""
-},
+  },
   {
     id: 65,
     title: "Sapiens: A Brief History of Humankind",
@@ -532,7 +532,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
     link: "/reader/sapiens",
     driveLink: ""
-},
+  },
   {
     id: 66,
     title: "The Martian",
@@ -540,7 +540,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1413706054i/18007564.jpg",
     link: "/reader/the-martian",
     driveLink: ""
-},
+  },
   {
     id: 67,
     title: "The Road",
@@ -548,15 +548,15 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1511302904i/6288.jpg",
     link: "/reader/the-road",
     driveLink: ""
-},
-{
+  },
+  {
     id: 68,
     title: "The Stand",
     author: "Stephen King",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1213131305i/149267.jpg",
     link: "/reader/the-stand",
     driveLink: ""
-},
+  },
   {
     id: 69,
     title: "A Wrinkle in Time",
@@ -564,47 +564,47 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1329061522i/18131.jpg",
     link: "/reader/a-wrinkle-in-time",
     driveLink: ""
-},
-{
+  },
+  {
     id: 70,
     title: "Jurassic Park",
     author: "Michael Crichton",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630494043i/40604658.jpg",
     link: "/reader/jurassic-park",
     driveLink: ""
-},
-{
+  },
+  {
     id: 71,
     title: "The War of the Worlds",
     author: "H.G. Wells",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1320391644i/8909.jpg",
     link: "/reader/the-war-of-the-worlds",
     driveLink: ""
-},
-{
+  },
+  {
     id: 72,
     title: "The Time Machine",
     author: "H.G. Wells",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327942880i/2493.jpg",
     link: "/reader/the-time-machine",
     driveLink: ""
-},
-{
+  },
+  {
     id: 73,
     title: "The Andromeda Strain",
     author: "Michael Crichton",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1439243935i/7670.jpg",
     link: "/reader/the-andromeda-strain",
     driveLink: ""
-},
-{
+  },
+  {
     id: 74,
     title: "Contact",
     author: "Carl Sagan",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630668987i/23229.jpg",
     link: "/reader/contact",
     driveLink: ""
-},
+  },
   {
     id: 75,
     title: "The 5th Wave",
@@ -612,7 +612,7 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1359857195i/16101128.jpg",
     link: "/reader/the-5th-wave",
     driveLink: ""
-},
+  },
   {
     id: 77,
     title: "The City We Became",
@@ -620,111 +620,111 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1567927143i/42074525.jpg",
     link: "/reader/the-city-we-became",
     driveLink: ""
-},
-{
+  },
+  {
     id: 78,
     title: "Mexican Gothic",
     author: "Silvia Moreno-Garcia",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575349296i/53152636.jpg",
     link: "/reader/mexican-gothic",
     driveLink: ""
-},
-{
+  },
+  {
     id: 79,
     title: "Cloud Atlas",
     author: "David Mitchell",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442650822i/49628.jpg",
     link: "/reader/cloud-atlas",
     driveLink: ""
-},
-{
+  },
+  {
     id: 80,
     title: "The Power",
     author: "Naomi Alderman",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1460379386i/32073191.jpg",
     link: "/reader/the-power",
     driveLink: ""
-},
-{
+  },
+  {
     id: 81,
     title: "The Invisible Life of Addie LaRue",
     author: "V.E. Schwab",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598439160i/50623864.jpg",
     link: "/reader/addie-larue",
     driveLink: ""
-},
-{
+  },
+  {
     id: 82,
     title: "House of Leaves",
     author: "Mark Z. Danielewski",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1527593113i/24800.jpg",
     link: "/reader/house-of-leaves",
     driveLink: ""
-},
-{
+  },
+  {
     id: 83,
     title: "One Hundred Years of Solitude",
     author: "Gabriel García Márquez",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327881361i/320.jpg",
     link: "/reader/one-hundred-years-of-solitude",
     driveLink: ""
-},
-{
+  },
+  {
     id: 84,
     title: "The Poppy War",
     author: "R.F. Kuang",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1516102061i/35068705.jpg",
     link: "/reader/the-poppy-war",
     driveLink: ""
-},
-{
+  },
+  {
     id: 85,
     title: "Circe",
     author: "Madeline Miller",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1594057191i/35959740.jpg",
     link: "/reader/circe",
     driveLink: ""
-},
-{
+  },
+  {
     id: 86,
     title: "The Priory of the Orange Tree",
     author: "Samantha Shannon",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1522178823i/29774026.jpg",
     link: "/reader/the-priory-of-the-orange-tree",
     driveLink: ""
-},
-{
+  },
+  {
     id: 87,
     title: "Daisy Jones & The Six",
     author: "Taylor Jenkins Reid",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1665346521i/40597810.jpg",
     link: "/reader/daisy-jones-the-six",
     driveLink: ""
-},
-{
+  },
+  {
     id: 88,
     title: "The Seven Husbands of Evelyn Hugo",
     author: "Taylor Jenkins Reid",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1663451705i/32620332.jpg",
     link: "/reader/the-seven-husbands",
     driveLink: ""
-},
-{
+  },
+  {
     id: 89,
     title: "Lessons in Chemistry",
     author: "Bonnie Garmus",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642093481i/58065033.jpg",
     link: "/reader/lessons-in-chemistry",
     driveLink: ""
-},
-{
+  },
+  {
     id: 90,
     title: "The House in the Cerulean Sea",
     author: "TJ Klune",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1569518610i/45047384.jpg",
     link: "/reader/the-house-in-the-cerulean-sea",
     driveLink: ""
-},
+  },
   {
     id: 91,
     title: "The Love Hypothesis",
@@ -732,102 +732,135 @@ const books = [
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1617695320i/56732449.jpg",
     link: "/reader/the-love-hypothesis",
     driveLink: ""
-},
-{
+  },
+  {
     id: 92,
     title: "It Ends with Us",
     author: "Colleen Hoover",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575153187i/27362503.jpg",
     link: "/reader/it-ends-with-us",
     driveLink: ""
-},
-{
+  },
+  {
     id: 93,
     title: "Beach Read",
     author: "Emily Henry",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1575906692i/52867387.jpg",
     link: "/reader/beach-read",
     driveLink: ""
-},
-{
+  },
+  {
     id: 94,
     title: "People We Meet on Vacation",
     author: "Emily Henry",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1607090148i/54985743.jpg",
     link: "/reader/people-we-meet-on-vacation",
     driveLink: ""
-},
-{
+  },
+  {
     id: 95,
     title: "Red, White & Royal Blue",
     author: "Casey McQuiston",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586092800i/41150487.jpg",
     link: "/reader/red-white-royal-blue",
     driveLink: ""
-},
-{
+  },
+  {
     id: 96,
     title: "The Unhoneymooners",
     author: "Christina Lauren",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1540577455i/42201431.jpg",
     link: "/reader/the-unhoneymooners",
     driveLink: ""
-},
-{
+  },
+  {
     id: 97,
     title: "Me Before You",
     author: "Jojo Moyes",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1359617636i/15507958.jpg",
     link: "/reader/me-before-you",
     driveLink: ""
-},
-{
+  },
+  {
     id: 98,
     title: "The Spanish Love Deception",
     author: "Elena Armas",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1624038490i/57228379.jpg",
     link: "/reader/the-spanish-love-deception",
     driveLink: ""
-},
-{
+  },
+  {
     id: 99,
     title: "November 9",
     author: "Colleen Hoover",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1444221752i/25111004.jpg",
     link: "/reader/november-9",
     driveLink: ""
-},
-{
+  },
+  {
     id: 100,
     title: "Reminders of Him",
     author: "Colleen Hoover",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1627652590i/58341222.jpg",
     link: "/reader/reminders-of-him",
     driveLink: ""
-}
+  }
 ];
 
 
 const topReadBooks = books.slice(0, 11); // First 11 books for "Top Read Books"
+
+const motivationTitles = [
+  "Rich Dad Poor Dad", "Atomic Habits", "Mindset: The New Psychology of Success", 
+  "The Psychology of Money", "The Alchemist", "Think and Grow Rich",
+  "The 7 Habits of Highly Effective People", "How to Win Friends and Influence People", 
+  "The Power of Now", "The Subtle Art of Not Giving a F*ck", "Meditations", "The 48 Laws of Power"
+].map((b) => b.toLowerCase());
+
+const sciFiTitles = [
+  "Dune", "Neuromancer", "The Three-Body Problem", "Hyperion", "The Left Hand of Darkness", 
+  "The Hitchhiker’s Guide to the Galaxy", "Contact", "Snow Crash", "Red Rising", 
+  "Children of Time", "The Da Vinci Code", "The Time Machine", "The Andromeda Strain"
+].map((b) => b.toLowerCase());
+
 const motivationBooks = books.filter((book) =>
-  ["Rich Dad Poor Dad", "Atomic Habits", "Mindset: The New Psychology of Success", "The Psychology of Money", "The Alchemist", "Think and Grow Rich","The 7 Habits of Highly Effective People", "How to Win Friends and Influence People", "The Power of Now", "The Subtle Art of Not Giving a F*ck", "Meditations", "The 48 Laws of Power" ].includes(book.title)
+  motivationTitles.includes(book.title.toLowerCase())
 );
+
 const sciFiBooks = books.filter((book) =>
-  ["Dune", "Neuromancer", "The Three-Body Problem", "Hyperion", "The Left Hand of Darkness", "The Hitchhiker’s Guide to the Galaxy","Contact", "Snow Crash","Red Rising" , "Children of Time", "The Da Vinci Code", "The Time Machine","The Andromeda Strain"].includes(book.title)
+  sciFiTitles.includes(book.title.toLowerCase())
 );
+
 
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  const filteredBooks = searchQuery
-    ? books.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : visibleBooks;
+  const filteredTopReadBooks = searchQuery
+  ? topReadBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : topReadBooks;
+
+const filteredMotivationBooks = searchQuery
+  ? motivationBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : motivationBooks;
+
+const filteredSciFiBooks = searchQuery
+  ? sciFiBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : sciFiBooks;
+
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
@@ -893,8 +926,8 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
           >
-           {topReadBooks.map((book) => (
-              <BookCard key={book.id} {...book} />
+           {filteredTopReadBooks.map((book) => (
+              <BookCard key={`topread-${book.id}`} {...book} />
             ))}
           </motion.div>
         </motion.div>
@@ -933,10 +966,9 @@ const Index = () => {
               transition={{ delay: 0.4 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
-              {motivationBooks.map((book) => (
-                <BookCard key={book.id} {...book} />
-              ))}
-
+              {filteredMotivationBooks.map((book) => (
+                <BookCard key={`motivation-${book.id}`} {...book} />
+                ))}
             </motion.div>
           </motion.div>
         </div>
@@ -975,10 +1007,9 @@ const Index = () => {
               transition={{ delay: 0.4 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
-              {sciFiBooks.map((book) => (
-                  <BookCard key={book.id} {...book} />
+              {filteredSciFiBooks.map((book) => (
+                  <BookCard key={`scifi-${book.id}`} {...book} />
                 ))}
-
             </motion.div>
           </motion.div>
         </div>
