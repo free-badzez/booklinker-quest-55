@@ -934,8 +934,9 @@ const Index = () => {
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
               {motivationBooks.map((book) => (
-                <BookCard key={`motivation-${book.id}`} {...book} />
+                <BookCard key={book.id} {...book} />
               ))}
+
             </motion.div>
           </motion.div>
         </div>
@@ -975,8 +976,9 @@ const Index = () => {
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
               {sciFiBooks.map((book) => (
-                <BookCard key={`scifi-${book.id}`} {...book} />
-              ))}
+                  <BookCard key={book.id} {...book} />
+                ))}
+
             </motion.div>
           </motion.div>
         </div>
