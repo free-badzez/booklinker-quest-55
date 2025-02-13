@@ -31,12 +31,12 @@ const books = [
   },
   {
     id: 3,
-    title: "Dune",
-    author: "Frank Herbert",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
-    link: "/reader/dune",
-    driveLink: "" // Add your Google Drive link here
-  },
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
+    link: "/reader/sapiens",
+    driveLink: ""
+},
   {
     id: 4,
     title: "Foundation",
@@ -525,14 +525,14 @@ const books = [
     link: "/reader/the-da-vinci-code",
     driveLink: ""
 },
- {
+  {
     id: 65,
-    title: "Dune",
-    author: "Frank Herbert",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
-    link: "/reader/dune",
-    driveLink: "" // Add your Google Drive link here
-  },
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
+    link: "/reader/sapiens",
+    driveLink: ""
+},
   {
     id: 66,
     title: "The Martian",
@@ -807,7 +807,15 @@ const books = [
 }
 ];
 
-const visibleBooks = books.slice(0, 11); // Only show first 11 books by default
+
+const topReadBooks = books.slice(0, 11); // First 11 books for "Top Read Books"
+const motivationBooks = books.filter((book) =>
+  ["Rich Dad Poor Dad", "Atomic Habits", "Mindset: The New Psychology of Success", "The Psychology of Money", "The Alchemist", "Think and Grow Rich","The 7 Habits of Highly Effective People", "How to Win Friends and Influence People", "The Power of Now", "The Subtle Art of Not Giving a F*ck", "Meditations", "The 48 Laws of Power" ].includes(book.title)
+);
+const sciFiBooks = books.filter((book) =>
+  ["Dune", "Neuromancer", "The Three-Body Problem", "Hyperion", "The Left Hand of Darkness", "The Hitchhiker’s Guide to the Galaxy","Contact", "Snow Crash","Red Rising" , "Children of Time", "The Da Vinci Code", "The Time Machine","The Andromeda Strain"].includes(book.title)
+);
+
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -885,7 +893,7 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
           >
-            {filteredBooks.map((book) => (
+           {topReadBooks.map((book) => (
               <BookCard key={book.id} {...book} />
             ))}
           </motion.div>
@@ -925,7 +933,7 @@ const Index = () => {
               transition={{ delay: 0.4 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
-              {filteredBooks.map((book) => (
+              {motivationBooks.map((book) => (
                 <BookCard key={`motivation-${book.id}`} {...book} />
               ))}
             </motion.div>
@@ -966,7 +974,7 @@ const Index = () => {
               transition={{ delay: 0.4 }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
-              {filteredBooks.map((book) => (
+              {sciFiBooks.map((book) => (
                 <BookCard key={`scifi-${book.id}`} {...book} />
               ))}
             </motion.div>
@@ -978,3 +986,4 @@ const Index = () => {
 };
 
 export default Index;
+
