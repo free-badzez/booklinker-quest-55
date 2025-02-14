@@ -27,14 +27,20 @@ const bookPDFs = {
   "the-power-of-now": "https://drive.google.com/file/d/1GjisDmXv-GxzjXKxZqw-b0vzU4foawuX/preview",
   "the-alchemist": "https://drive.google.com/file/d/1BmfvQ8XDA6G5IAyureXwHeeNiQnKSTrH/preview",
   "subtle-art": "https://drive.google.com/file/d/1l1-YxSel33eSTIOdYkZlWDE45BslH4oK/preview",
-  "The 4-hour-work-week": "https://drive.google.com/file/d/1b4vBh1rJT8ujt5EbDj-GvIQlXW8TqHJs/preview",
+  "The-4-hour-work-week": "https://drive.google.com/file/d/1b4vBh1rJT8ujt5EbDj-GvIQlXW8TqHJs/preview",
   "mindset": "https://drive.google.com/file/d/1dOM2xQdutXKSN6R1xuUdWZNngl4n0Mu9/preview",
   "deep-work": "https://drive.google.com/file/d/1ljUjMbYjEZWeVH5P5y3FxNfnRtV9FY4W/preview",
   "compound-effect": "https://drive.google.com/file/d/1EHaDB8tQ70ZYLOT8HM-A08Szn4bc8ZmO/preview",
-  "Sapiens: A Brief History of Humankind":"https://drive.google.com/file/d/1AbuHGlWMrCMcwVWjnUqeBBjiG9N_RjDk/preview",
-  "The 7 Habits of Highly Effective People":"https://drive.google.com/file/d/1ZLsbdckGMUPKc6dFKii_4ab8PuB45B7j/preview",
-  "Harry Potter and the Sorcerer’s Stone":"https://drive.google.com/file/d/1NyczhOBFK3-CzkqMa5T3v6lGHhib2uR1/preview",
-  "Meditations":"https://drive.google.com/file/d/1wDnxhboh30hnONG3PCWcSoRzKgT_CGV1/preview"
+  "Sapiens":"https://drive.google.com/file/d/1AbuHGlWMrCMcwVWjnUqeBBjiG9N_RjDk/preview",
+  "The-7-Habits-of-Highly-Effective-People":"https://drive.google.com/file/d/1ZLsbdckGMUPKc6dFKii_4ab8PuB45B7j/preview",
+  "Harry-Potter-and-the-Sorcerer’s-Stone":"https://drive.google.com/file/d/1NyczhOBFK3-CzkqMa5T3v6lGHhib2uR1/preview",
+  "Meditations":"https://drive.google.com/file/d/1wDnxhboh30hnONG3PCWcSoRzKgT_CGV1/preview",
+  "The-Courage-to-Be-Disliked":"https://drive.google.com/file/d/1TGPFzlJaqEKANPjl874TRGZiFTqTSz5h/preview",
+  "Ego Is the Enemy":"https://drive.google.com/file/d/1A-fGCZSiGE38hP9UGMrFdGrg0HUcF95w/preview",
+  "The Daily Stoic":"https://drive.google.com/file/d/1xz-1StrtBKbBGfyWyQIzX-dWgRdiJ2XV/preview",
+  "Man’s Search for Meaning":"https://drive.google.com/file/d/1iC1cKMiaBFrXxohHzcBQ1oPnw_YPUyVA/preview",
+  "Grit":"https://drive.google.com/file/d/1zRWPssBTT14o0TMuEyKlHAA9hPSx52zK/preview",
+  "12 Rules for Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview"
 };
 
 const BookReader = () => {
