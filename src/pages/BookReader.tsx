@@ -40,7 +40,14 @@ const bookPDFs = {
   "The Daily Stoic":"https://drive.google.com/file/d/1xz-1StrtBKbBGfyWyQIzX-dWgRdiJ2XV/preview",
   "Man’s Search for Meaning":"https://drive.google.com/file/d/1iC1cKMiaBFrXxohHzcBQ1oPnw_YPUyVA/preview",
   "Grit":"https://drive.google.com/file/d/1zRWPssBTT14o0TMuEyKlHAA9hPSx52zK/preview",
-  "12 Rules for Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview"
+  "12 Rules for Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview",
+  "Make Your Bed":"https://drive.google.com/file/d/1NbJFIQxeKdfg-e48yj8scssrr9-t5dFd/preview",
+  "Extreme Ownership":"https://drive.google.com/file/d/1An9uJyTLn3t--8ajvil6MTISbNjEL28l/preview",
+  "The Mountain Is You":"",
+  "Mastery":"https://drive.google.com/file/d/1lPQB96K4a9jvNPwZ7o0KqEeZe4WkbznL/preview",
+  "The Laws of Human Nature":"",
+  "No Rules Rules":"",
+  
 };
 
 const BookReader = () => {
