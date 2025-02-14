@@ -47,7 +47,16 @@ const bookPDFs = {
   "Mastery":"https://drive.google.com/file/d/1lPQB96K4a9jvNPwZ7o0KqEeZe4WkbznL/preview",
   "The Laws of Human Nature":"",
   "No Rules Rules":"",
-  
+  "Principles":"https://drive.google.com/file/d/1hAFCPfZ4pce9WTBLvaSMbKefEfFJcsEa/preview",
+  "The Almanack of Naval Ravikant":"",
+  "The Lean Startup":"",
+  "Start with Why":"",
+  "Drive: The Surprising Truth About What Motivates Us":"",
+  "So Good They Can’t Ignore You":"",
+  "1984":"",
+  "Brave New World":"",
+  "The Hitchhiker’s Guide to the Galaxy":""
+  "Fahrenheit 451":""
 };
 
 const BookReader = () => {
