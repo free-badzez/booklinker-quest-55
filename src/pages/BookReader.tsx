@@ -43,20 +43,20 @@ const bookPDFs = {
   "12 Rules for Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview",
   "Make Your Bed":"https://drive.google.com/file/d/1NbJFIQxeKdfg-e48yj8scssrr9-t5dFd/preview",
   "Extreme Ownership":"https://drive.google.com/file/d/1An9uJyTLn3t--8ajvil6MTISbNjEL28l/preview",
-  "The Mountain Is You":"",
+  "The Mountain Is You":"https://drive.google.com/file/d/1lHerpQHogzQd0RybKlTow4AR3OIQj6kH/preview",
   "Mastery":"https://drive.google.com/file/d/1lPQB96K4a9jvNPwZ7o0KqEeZe4WkbznL/preview",
-  "The Laws of Human Nature":"",
-  "No Rules Rules":"",
+  "The Laws of Human Nature":"https://drive.google.com/file/d/11WHUgPdL3hM_Gu0MXbAA5Ht7nTYMInVm/preview",
+  "No Rules Rules":"https://drive.google.com/file/d/1vyEYUwxLbsGxLt25VtV6pKsg3Y7Jpxnc/preview",
   "Principles":"https://drive.google.com/file/d/1hAFCPfZ4pce9WTBLvaSMbKefEfFJcsEa/preview",
-  "The Almanack of Naval Ravikant":"",
+  "The Almanack of Naval Ravikant":"https://drive.google.com/file/d/1IWJDlM258zs2MPL4ezY5MjB6NicKJ4hE/preview",
   "The Lean Startup":"",
-  "Start with Why":"",
+  "Start with Why":"https://drive.google.com/file/d/1qnry44zH1OVw5gMF4sp5JPxDw7ZZqTUE/preview",
   "Drive: The Surprising Truth About What Motivates Us":"",
-  "So Good They Can’t Ignore You":"",
-  "1984":"",
-  "Brave New World":"",
+  "So Good They Can’t Ignore You":"https://drive.google.com/file/d/1URTZfgtsAHTVQQw-ly_PB3YGieT2gxj-/preview",
+  "1984":"https://drive.google.com/file/d/1Z1LCJP3LW7UN3wSJOsLkgeDp7shiDbbv/preview",
+  "Brave New World":"https://drive.google.com/file/d/1-lKJPFpkGRtEdZZarH0BeKWLJvZEpi7y/preview",
   "The Hitchhiker’s Guide to the Galaxy":""
-  "Fahrenheit 451":""
+  "Fahrenheit 451":"https://drive.google.com/file/d/1MyUiGYy9E6hPlBQZXH4kyq0-6rt8Yzy9/preview"
 };
 
 const BookReader = () => {
