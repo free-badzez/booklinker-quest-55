@@ -84,7 +84,28 @@ const bookPDFs = {
   "The 5th Wave":"",
   "The City We Became":"",
   "Mexican Gothic":"",
-  
+  "Cloud Atlas":"",
+  "The Power":"",
+  "The Invisible Life of Addie LaRue":"",
+  "House of Leaves":"",
+  "One Hundred Years of Solitude":"",
+  "The Poppy War":"",
+  "Circe":"",
+  "The Priory of the Orange Tree":"",
+  "Daisy Jones & The Six":"",
+  "The Seven Husbands of Evelyn Hugo":"",
+   "Lessons in Chemistry":"",
+  "The House in the Cerulean Sea":"",
+  "The Love Hypothesis":"",
+  "It Ends with Us":"",
+  "Beach Read":"",
+  "People We Meet on Vacation":"",
+  "Red, White & Royal Blue":"",
+  "The Unhoneymooners":"",
+  "Me Before You":"",
+  "The Spanish Love Deception":"",
+  "November 9":"",
+  "Reminders of Him":"" 
 };
 
 const BookReader = () => {
