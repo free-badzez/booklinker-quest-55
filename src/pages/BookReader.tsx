@@ -102,9 +102,9 @@ const bookPDFs = {
   "Beach Read":"https://drive.google.com/file/d/1C5HxIWmwqxugbJLe8wH2XndEYI9RRiqD/preview",
   "People We Meet on Vacation":"https://drive.google.com/file/d/1hnTDJ2AwoheQ1ADf1BGRDabjiwTJvQda/preview",
   "Red, White & Royal Blue":"https://drive.google.com/file/d/1Cm1l21X1Y9ZQIHuyssSSX-MTjNoQxcCk/preview",
-  "The Unhoneymooners":"",
-  "Me Before You":"",
-  "The Spanish Love Deception":"",
+  "The Unhoneymooners":"https://drive.google.com/file/d/1KoZC2q-miX8lHnRRMxVzIGfYCzPwpGPt/preview",
+  "Me Before You":"https://drive.google.com/file/d/17iCC-VcgZNzoHK0i_B2oqyI5wNcoV8ci/preview",
+  "The Spanish Love Deception":"https://drive.google.com/file/d/1iSEEFa6ZWU-u5QWxwLH62b6OKz1Pgy4c/preview",
   "November 9":"",
   "Reminders of Him":"" 
 };
