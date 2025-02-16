@@ -64,7 +64,7 @@ const bookPDFs = {
   "To Kill a Mockingbird":"https://drive.google.com/file/d/1k8PgtS_fPo2BKMp_QDH7fa6VsDl7T8VO/preview",
   "Pride and Prejudice":"https://drive.google.com/file/d/11-1qkqZNWY4-Id5kpCjtgvrSy-Y-fGj0/preview",
   "Crime and Punishment":"https://drive.google.com/file/d/1yg1AAN98KELDttECk0WLnyFb7TsgyyUA/preview",
-  "The Power":"https://drive.google.com/file/d/1C9cHO50EHIpRIv0rJTtbARReMPEvg4ku/preview"
+  "The Power":"https://drive.google.com/file/d/1C9cHO50EHIpRIv0rJTtbARReMPEvg4ku/preview",
   "The Catcher in the Rye":"https://drive.google.com/file/d/1vuQbPRQa9OtsGjFNEWY0Vcsv1V_-PvbL/preview",
   "Dracula":"https://drive.google.com/file/d/1bPfBqB28VKin63DlN1rL7XCyV43PrKvf/preview",
   "Frankenstein":"https://drive.google.com/file/d/1lJL28vr5kxeiJnzKrJ2QVftaGS2rQ0KG/preview",
