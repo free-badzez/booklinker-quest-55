@@ -105,8 +105,8 @@ const bookPDFs = {
   "The Unhoneymooners":"https://drive.google.com/file/d/1KoZC2q-miX8lHnRRMxVzIGfYCzPwpGPt/preview",
   "Me Before You":"https://drive.google.com/file/d/17iCC-VcgZNzoHK0i_B2oqyI5wNcoV8ci/preview",
   "The Spanish Love Deception":"https://drive.google.com/file/d/1iSEEFa6ZWU-u5QWxwLH62b6OKz1Pgy4c/preview",
-  "November 9":"",
-  "Reminders of Him":"" 
+  "November 9":"https://drive.google.com/file/d/1KaI5hNR2UzohcpVXir7haJxVwmpRkHCe/preview",
+  "Reminders of Him":"https://drive.google.com/file/d/1JedXt50oIc7KnOs9Hhfevd73aGVPsqox/preview" 
 };
 
 const BookReader = () => {
