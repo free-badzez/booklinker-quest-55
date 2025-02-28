@@ -105,7 +105,7 @@ const books = [
     id: 12,
     title: "Rich Dad Poor Dad",
     author: "Robert T. Kiyosaki",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388211242i/69571.jpg",
+    cover: "https://m.media-amazon.com/images/I/81BE7eeKzAL.jpg",
     link: "/reader/rich-dad-poor-dad",
     driveLink: "" // Add your Google Drive link here
   },
