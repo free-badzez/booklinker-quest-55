@@ -177,8 +177,8 @@ const books = [
     id: 21,
     title: "The 4-Hour Work Week",
     author: "Timothy Ferriss",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348972669i/368593.jpg",
-    link: "/reader/4-hour-work-week",
+    cover: "https://m.media-amazon.com/images/I/6142S0D-PiL._AC_UF1000,1000_QL80_.jpg",
+    link: "/reader/The-4-hour-work-week",
     driveLink: ""
   },
   {
@@ -193,7 +193,7 @@ const books = [
     id: 23,
     title: "Deep Work",
     author: "Cal Newport",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1447957962i/25744928.jpg",
+    cover: "https://m.media-amazon.com/images/I/81JJ7fyyKyS.jpg",
     link: "/reader/deep-work",
     driveLink: ""
   },
@@ -201,7 +201,7 @@ const books = [
     id: 24,
     title: "The Compound Effect",
     author: "Darren Hardy",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391442225i/9420697.jpg",
+    cover: "https://m.media-amazon.com/images/I/610QDSRlLYL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/compound-effect",
     driveLink: ""
   },
@@ -209,7 +209,7 @@ const books = [
     id: 25,
     title: "Meditations",
     author: "Marcus Aurelius",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598718766i/30659.jpg",
+    cover: "https://m.media-amazon.com/images/I/81DFDGzHZqL.jpg",
     link: "/reader/meditations",
     driveLink: ""
 },
