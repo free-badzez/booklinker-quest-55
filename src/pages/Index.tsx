@@ -135,6 +135,14 @@ const books = [
   },
   {
     id: 16 ,
+    title: "DUNE",
+    author: " Frank Herbert",
+    cover: "https://m.media-amazon.com/images/I/71oO1E-XPuL._AC_UF1000,1000_QL80_.jpg",
+    link: "/reader/drive",
+    driveLink: ""
+  },
+  {
+    id: 17 ,
     title: "Drive: The Surprising Truth About What Motivates Us",
     author: "Daniel H. Pink",
     cover: "https://m.media-amazon.com/images/I/71uTHTyxtwL._AC_UF1000,1000_QL80_.jpg",
@@ -142,7 +150,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 17,
+    id: 18,
     title: "Ego Is the Enemy",
     author: "Ryan Holiday",
     cover: "https://m.media-amazon.com/images/I/71XJ8xwLPpL.jpg",
@@ -150,7 +158,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 18,
+    id: 19,
     title: "Extreme Ownership",
     author: "Jocko Willink, Leif Babin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1427163007i/23848190.jpg",
@@ -158,7 +166,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 19,
+    id: 20,
     title: "Fahrenheit 451",
     author: "Ray Bradbury",
     cover: "https://m.media-amazon.com/images/I/61zc4fPQbIL._AC_UF1000,1000_QL80_.jpg",
@@ -166,7 +174,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 20,
+    id: 21,
     title: "Foundation",
     author: "Isaac Asimov",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1417900846i/29579.jpg",
@@ -174,7 +182,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 21,
+    id: 22,
     title: "Frankenstein",
     author: "Mary Shelley",
     cover: "https://m.media-amazon.com/images/I/91KEmBm2GVL._AC_UF1000,1000_QL80_.jpg",
@@ -182,7 +190,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 22,
+    id: 23,
     title: "Grit",
     author: "Angela Duckworth",
     cover: "https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg",
@@ -190,7 +198,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 23,
+    id: 24,
     title: "Harry Potter and the Sorcerer’s Stone",
     author: "J.K. Rowling",
     cover: "https://m.media-amazon.com/images/I/81q77Q39nEL.jpg",
@@ -198,7 +206,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 24,
+    id: 25,
     title: "House of Leaves",
     author: "Mark Z. Danielewski",
     cover: "https://m.media-amazon.com/images/I/61yArGR8YkL._AC_UF1000,1000_QL80_.jpg",
@@ -206,7 +214,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 25,
+    id: 26,
     title: "How to Win Friends and Influence People",
     author: "Dale Carnegie",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442726934i/4865.jpg",
@@ -214,7 +222,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 26,
+    id: 27,
     title: "Hyperion",
     author: "Dan Simmons",
     cover: "https://m.media-amazon.com/images/I/91V0S0qjKwL._AC_UF1000,1000_QL80_.jpg",
@@ -222,7 +230,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 27,
+    id: 28,
     title: "It",
     author: "Stephen King",
     cover: "https://m.media-amazon.com/images/I/712+f2W4uoL._AC_UF1000,1000_QL80_.jpg",
@@ -230,7 +238,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 28,
+    id: 29,
     title: "It Ends with Us",
     author: "Colleen Hoover",
     cover: "https://m.media-amazon.com/images/I/81G91BUSHsL._UF1000,1000_QL80_.jpg",
@@ -238,7 +246,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 29,
+    id: 30,
     title: "Jurassic Park",
     author: "Michael Crichton",
     cover: "https://m.media-amazon.com/images/I/91CbcH+c5eL.jpg",
@@ -246,15 +254,23 @@ const books = [
     driveLink: ""
   },
   {
-    id: 30,
+    id: 31,
     title: "Lessons in Chemistry",
     author: "Bonnie Garmus",
     cover: "https://m.media-amazon.com/images/I/81-GeCd+96L.jpg",
     link: "/reader/lessons-in-chemistry",
     driveLink: ""
     },
+  {
+    id: 32,
+    title: "Left hand of darkness",
+    author: "Bonnie Garmus",
+    cover: "https://m.media-amazon.com/images/I/81-GeCd+96L.jpg",
+    link: "/reader/lessons-in-chemistry",
+    driveLink: ""
+    },
     {
-    id: 31,
+    id: 33,
     title: "Make Your Bed",
     author: "William H. McRaven",
     cover: "https://m.media-amazon.com/images/I/710b2STZwOL._AC_UF1000,1000_QL80_.jpg",
@@ -262,7 +278,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 32,
+    id: 34,
     title: "Man’s Search for Meaning",
     author: "Viktor E. Frankl",
     cover: "https://m.media-amazon.com/images/I/61157LApbuL._AC_UF1000,1000_QL80_.jpg",
@@ -270,7 +286,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 33,
+    id: 35,
     title: "Mastery",
     author: "Robert Greene",
     cover: "https://m.media-amazon.com/images/I/61kZgW7wemL._AC_UF1000,1000_QL80_.jpg",
@@ -278,7 +294,7 @@ const books = [
     driveLink: ""
     },
   {
-    id: 34,
+    id: 36,
     title: "Meditations",
     author: "Marcus Aurelius",
     cover: "https://m.media-amazon.com/images/I/81DFDGzHZqL.jpg",
@@ -286,7 +302,7 @@ const books = [
     driveLink: ""
 },
    {
-    id: 35,
+    id: 37,
     title: "Mexican Gothic",
     author: "Silvia Moreno-Garcia",
     cover: "https://m.media-amazon.com/images/I/81Q9jM2ASmL._AC_UF1000,1000_QL80_.jpg",
@@ -294,7 +310,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 36,
+    id: 38,
     title: "Me Before You",
     author: "Jojo Moyes",
     cover: "https://m.media-amazon.com/images/I/61u7fXK-n-L._AC_UF1000,1000_QL80_.jpg",
@@ -302,7 +318,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 37,
+    id: 39,
     title: "Mindset: The New Psychology of Success",
     author: "Carol S. Dweck",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1436227012i/40745.jpg",
@@ -310,7 +326,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 38,
+    id: 40,
     title: "Neuromancer",
     author: "William Gibson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
@@ -318,7 +334,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 39,
+    id: 41,
     title: "November 9",
     author: "Colleen Hoover",
     cover: "https://m.media-amazon.com/images/I/71RBpTJkKaL.jpg",
@@ -326,7 +342,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 40,
+    id: 42,
     title: "No Rules Rules",
     author: "Reed Hastings, Erin Meyer",
     cover: "https://m.media-amazon.com/images/I/81Dg7P7KFFL.jpg",
@@ -334,7 +350,7 @@ const books = [
     driveLink: ""
 },
    {
-    id: 41,
+    id: 43,
     title: "One Hundred Years of Solitude",
     author: "Gabriel García Márquez",
     cover: "https://m.media-amazon.com/images/I/61mok7+j2dL._AC_UF1000,1000_QL80_.jpg",
@@ -342,7 +358,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 42,
+    id: 44,
     title: "People We Meet on Vacation",
     author: "Emily Henry",
     cover: "https://m.media-amazon.com/images/I/81i9kql+6PL._AC_UF1000,1000_QL80_.jpg",
@@ -350,7 +366,7 @@ const books = [
     driveLink: ""
   },
     {
-    id: 43,
+    id: 45,
     title: "Project Hail Mary",
     author: "Andy Weir",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1597695864i/54493401.jpg",
@@ -358,7 +374,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 44,
+    id: 46,
     title: "Pride and Prejudice",
     author: "Jane Austen",
     cover: "https://m.media-amazon.com/images/I/712P0p5cXIL._AC_UF1000,1000_QL80_.jpg",
@@ -366,7 +382,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 45,
+    id: 47,
     title: "Principles",
     author: "Ray Dalio",
     cover: "https://m.media-amazon.com/images/I/61LKD6scbfL.jpg",
@@ -374,7 +390,7 @@ const books = [
     driveLink: ""
 },
   {
-    id: 46,
+    id: 48,
     title: "Red, White & Royal Blue",
     author: "Casey McQuiston",
     cover: "https://m.media-amazon.com/images/I/71pSRcqtzbL._AC_UF1000,1000_QL80_.jpg",
@@ -382,7 +398,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 47,
+    id: 49,
     title: "Reminders of Him",
     author: "Colleen Hoover",
     cover: "https://m.media-amazon.com/images/I/71rdsaOMvVL._AC_UF1000,1000_QL80_.jpg",
@@ -390,7 +406,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 48,
+    id: 50,
     title: "Red Rising",
     author: "Pierce Brown",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1461354651i/15839976.jpg",
@@ -398,7 +414,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 49,
+    id: 51,
     title: "Rich Dad Poor Dad",
     author: "Robert T. Kiyosaki",
     cover: "https://m.media-amazon.com/images/I/81BE7eeKzAL.jpg",
@@ -406,7 +422,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 50,
+    id: 52,
     title: "Sapiens: A Brief History of Humankind",
     author: "Yuval Noah Harari",
     cover: "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
@@ -414,7 +430,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 51,
+    id: 53,
     title: "So Good They Can’t Ignore You",
     author: "Cal Newport",
     cover: "https://m.media-amazon.com/images/I/81vEQ9rFgKL.jpg",
@@ -422,7 +438,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 52 ,
+    id: 53 ,
     title: "Snow Crash",
     author: "Neal Stephenson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589842551i/40651883.jpg",
@@ -430,7 +446,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 53,
+    id: 55,
     title: "Start with Why",
     author: "Simon Sinek",
     cover: "https://m.media-amazon.com/images/I/71M1P287BjL._AC_UF1000,1000_QL80_.jpg",
@@ -438,7 +454,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 54,
+    id: 56,
     title: "The Alchemist",
     author: "Paulo Coelho",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg",
@@ -446,7 +462,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 55,
+    id: 57,
     title: "The Almanack of Naval Ravikant",
     author: "Eric Jorgenson",
     cover: "https://m.media-amazon.com/images/I/51lUeX6L2BL._AC_UF1000,1000_QL80_.jpg",
@@ -454,7 +470,7 @@ const books = [
     driveLink: ""
 },
   {
-    id: 56,
+    id: 58,
     title: "The Andromeda Strain",
     author: "Michael Crichton",
     cover: "https://m.media-amazon.com/images/I/91bHkt+0KaL._AC_UF1000,1000_QL80_.jpg",
@@ -462,7 +478,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 57,
+    id: 59,
     title: "The Catcher in the Rye",
     author: "J.D. Salinger",
     cover: "https://m.media-amazon.com/images/I/7108sdEUEGL.jpg",
@@ -470,7 +486,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 58,
+    id: 60,
     title: "The City We Became",
     author: "N.K. Jemisin",
     cover: "https://m.media-amazon.com/images/I/81Z2QA86JCL._AC_UF1000,1000_QL80_.jpg",
@@ -478,7 +494,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 59,
+    id: 61,
     title: "The Compound Effect",
     author: "Darren Hardy",
     cover: "https://m.media-amazon.com/images/I/610QDSRlLYL._AC_UF1000,1000_QL80_.jpg",
@@ -486,7 +502,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 60,
+    id: 62,
     title: "The Courage to Be Disliked",
     author: "Ichiro Kishimi, Fumitake Koga",
     cover: "https://m.media-amazon.com/images/I/710cYy40DUL.jpg",
@@ -494,7 +510,7 @@ const books = [
     driveLink: ""
 },
    {
-    id: 61,
+    id: 63,
     title: "The Da Vinci Code",
     author: "Dan Brown",
     cover: "https://m.media-amazon.com/images/I/71y4X5150dL._UF1000,1000_QL80_.jpg",
@@ -502,7 +518,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 62,
+    id: 64,
     title: "The Daily Stoic",
     author: "Ryan Holiday, Stephen Hanselman",
     cover: "https://m.media-amazon.com/images/I/71r4YkNAUKL._AC_UF1000,1000_QL80_.jpg",
@@ -510,7 +526,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 63,
+    id: 65,
     title: "The Girl with the Dragon Tattoo",
     author: "Stieg Larsson",
     cover: "https://m.media-amazon.com/images/I/81YW99XIpJL._UF1000,1000_QL80_.jpg",
@@ -518,7 +534,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 64,
+    id: 66,
     title: "The Hitchhiker’s Guide to the Galaxy",
     author: "Douglas Adams",
     cover: "https://m.media-amazon.com/images/I/81Nqplsq6LL._AC_UF1000,1000_QL80_.jpg",
@@ -526,7 +542,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 65,
+    id: 67,
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     cover: "https://m.media-amazon.com/images/I/717TGeIkVML._AC_UF1000,1000_QL80_.jpg",
@@ -534,7 +550,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 66,
+    id: 68,
     title: "The House in the Cerulean Sea",
     author: "TJ Klune",
     cover: "https://m.media-amazon.com/images/I/71bgrXZvbuS._UF1000,1000_QL80_.jpg",
@@ -542,7 +558,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 67,
+    id: 69,
     title: "The Invisible Life of Addie LaRue",
     author: "V.E. Schwab",
     cover: "https://m.media-amazon.com/images/I/91U8gXEhK3L._AC_UF1000,1000_QL80_.jpg",
@@ -550,7 +566,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 68,
+    id: 70,
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     cover: "https://m.media-amazon.com/images/I/71smIoGNeiL._UF1000,1000_QL80_.jpg",
@@ -558,7 +574,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 69,
+    id: 71,
     title: "The Left Hand of Darkness",
     author: "Ursula K. Le Guin",
     cover: "https://m.media-amazon.com/images/I/612j5C23G-L._AC_UF1000,1000_QL80_.jpg",
@@ -566,7 +582,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 70,
+    id: 72,
     title: "The Lord of the Rings",
     author: "J.R.R. Tolkien",
     cover: "https://m.media-amazon.com/images/I/81j4C6j3dRL.jpg",
@@ -574,7 +590,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 71,
+    id: 73,
     title: "The Love Hypothesis",
     author: "Ali Hazelwood",
     cover: "https://m.media-amazon.com/images/I/81plBFoPgtL._AC_UF1000,1000_QL80_.jpg",
@@ -582,7 +598,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 72,
+    id: 74,
     title: "The Laws of Human Nature",
     author: "Robert Greene",
     cover: "https://m.media-amazon.com/images/I/61LkQGz38cL.jpg",
@@ -590,7 +606,7 @@ const books = [
     driveLink: ""
 },
 {
-    id: 73,
+    id: 75,
     title: "The Lean Startup",
     author: "Eric Ries",
     cover: "https://m.media-amazon.com/images/I/61BFOf9Ap-L._AC_UF1000,1000_QL80_.jpg",
@@ -598,7 +614,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 74,
+    id: 76,
     title: "The Martian",
     author: "Andy Weir",
     cover: "https://m.media-amazon.com/images/I/51QimqeXMXL._AC_UF1000,1000_QL80_.jpg",
@@ -606,7 +622,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 75,
+    id: 77,
     title: "The Mountain Is You",
     author: "Brianna Wiest",
     cover: "https://m.media-amazon.com/images/I/61xivWmExiL._AC_UF1000,1000_QL80_.jpg",
@@ -614,7 +630,7 @@ const books = [
     driveLink: ""
 },
    {
-    id: 76,
+    id: 78,
     title: "The Name of the Wind",
     author: "Patrick Rothfuss",
     cover: "https://m.media-amazon.com/images/I/611iKJa7a-L.jpg",
@@ -622,7 +638,7 @@ const books = [
     driveLink: ""
   },
     {
-    id: 77,
+    id: 79,
     title: "The Power of Now",
     author: "Eckhart Tolle",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1689947880i/6708.jpg",
@@ -630,7 +646,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 78,
+    id: 80,
     title: "The Poppy War",
     author: "R.F. Kuang",
     cover: "https://m.media-amazon.com/images/I/71qrDmmlupL._UF1000,1000_QL80_.jpg",
@@ -638,7 +654,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 79,
+    id: 81,
     title: "The Priory of the Orange Tree",
     author: "Samantha Shannon",
     cover: "https://m.media-amazon.com/images/I/91JR5HRL84L._UF1000,1000_QL80_.jpg",
@@ -646,7 +662,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 80,
+    id: 82,
     title: "The Psychology of Money",
     author: "Morgan Housel",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1581527774i/41881472.jpg",
@@ -654,7 +670,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 81,
+    id: 83,
     title: "The Power",
     author: "Naomi Alderman",
     cover: "https://m.media-amazon.com/images/I/61wncgMzC5L._AC_UF1000,1000_QL80_.jpg",
@@ -662,7 +678,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 82,
+    id: 84,
     title: "The Road",
     author: "Cormac McCarthy",
     cover: "https://m.media-amazon.com/images/I/711WYzePJeL.jpg",
@@ -670,7 +686,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 83,
+    id: 85,
     title: "The Seven Husbands of Evelyn Hugo",
     author: "Taylor Jenkins Reid",
     cover: "https://m.media-amazon.com/images/I/710QvWhZIwL._AC_UF1000,1000_QL80_.jpg",
@@ -678,7 +694,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 84,
+    id: 86,
     title: "The Shining",
     author: "Stephen King",
     cover: "https://m.media-amazon.com/images/I/81zqohMOk-L.jpg",
@@ -686,7 +702,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 85,
+    id: 87,
     title: "The Spanish Love Deception",
     author: "Elena Armas",
     cover: "https://m.media-amazon.com/images/I/610rcbFwuZL._AC_UF1000,1000_QL80_.jpg",
@@ -694,7 +710,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 86,
+    id: 88,
     title: "The Stand",
     author: "Stephen King",
     cover: "https://m.media-amazon.com/images/I/91YWt2jiowL._AC_UF1000,1000_QL80_.jpg",
@@ -702,7 +718,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 87,
+    id: 89,
     title: "The Subtle Art of Not Giving a F*ck",
     author: "Mark Manson",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1465761302i/28257707.jpg",
@@ -710,7 +726,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 88,
+    id: 90,
     title: "The Three-Body Problem",
     author: "Liu Cixin",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1415428227i/20518872.jpg",
@@ -718,7 +734,7 @@ const books = [
     driveLink: "" // Add your Google Drive link here
   },
   {
-    id: 89,
+    id: 91,
     title: "The Time Machine",
     author: "H.G. Wells",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327942880i/2493.jpg",
@@ -726,7 +742,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 90,
+    id: 92,
     title: "The Unhoneymooners",
     author: "Christina Lauren",
     cover: "https://m.media-amazon.com/images/I/71PVJVuMMQL._UF1000,1000_QL80_.jpg",
@@ -734,7 +750,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 91,
+    id: 93,
     title: "The War of the Worlds",
     author: "H.G. Wells",
     cover: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451687989/the-war-of-the-worlds-9781451687989_hr.jpg",
@@ -742,7 +758,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 92,
+    id: 94,
     title: "The 7 Habits of Highly Effective People",
     author: "Stephen R. Covey",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421842784i/36072.jpg",
@@ -751,7 +767,7 @@ const books = [
   },
  
 {
-    id: 93,
+    id: 95,
     title: "The 48 Laws of Power",
     author: "Robert Greene",
     cover: "https://m.media-amazon.com/images/I/61F-bq53kOL.jpg",
@@ -759,7 +775,7 @@ const books = [
     driveLink: ""
 },
   {
-    id: 94,
+    id: 96,
     title: "The 4-Hour Work Week",
     author: "Timothy Ferriss",
     cover: "https://m.media-amazon.com/images/I/6142S0D-PiL._AC_UF1000,1000_QL80_.jpg",
@@ -767,7 +783,7 @@ const books = [
     driveLink: ""
   },
    {
-    id: 95,
+    id: 97,
     title: "The 5th Wave",
     author: "Rick Yancey",
     cover: "https://m.media-amazon.com/images/I/61P4qla-ThL._AC_UF1000,1000_QL80_.jpg",
@@ -775,7 +791,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 96,
+    id: 98,
     title: "Think and Grow Rich",
     author: "Napoleon Hill",
     cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463241782i/30186948.jpg",
@@ -783,7 +799,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 97,
+    id: 99,
     title: "1984",
     author: "George Orwell",
     cover: "https://m.media-amazon.com/images/I/612ADI+BVlL._AC_UF1000,1000_QL80_.jpg",
@@ -791,7 +807,7 @@ const books = [
     driveLink: ""
   },
   {
-    id: 98,
+    id: 100,
     title: "12 Rules for Life",
     author: "Jordan B. Peterson",
     cover: "https://m.media-amazon.com/images/I/71OVB8HknWL.jpg",
