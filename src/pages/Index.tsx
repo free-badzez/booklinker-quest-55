@@ -217,7 +217,7 @@ const books = [
     id: 26,
     title: "The Courage to Be Disliked",
     author: "Ichiro Kishimi, Fumitake Koga",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1525433527i/43306206.jpg",
+    cover: "https://m.media-amazon.com/images/I/710cYy40DUL.jpg",
     link: "/reader/the-courage-to-be-disliked",
     driveLink: ""
 },
@@ -225,7 +225,7 @@ const books = [
     id: 27,
     title: "Ego Is the Enemy",
     author: "Ryan Holiday",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1452627562i/27036528.jpg",
+    cover: "https://m.media-amazon.com/images/I/71XJ8xwLPpL.jpg",
     link: "/reader/ego-is-the-enemy",
     driveLink: ""
 },
@@ -233,7 +233,7 @@ const books = [
     id: 28,
     title: "The Daily Stoic",
     author: "Ryan Holiday, Stephen Hanselman",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463464943i/29093292.jpg",
+    cover: "https://m.media-amazon.com/images/I/71r4YkNAUKL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/the-daily-stoic",
     driveLink: ""
 },
@@ -241,7 +241,7 @@ const books = [
     id: 29,
     title: "Man’s Search for Meaning",
     author: "Viktor E. Frankl",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1603125754i/4069.jpg",
+    cover: "https://m.media-amazon.com/images/I/61157LApbuL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/mans-search-for-meaning",
     driveLink: ""
 },
@@ -249,7 +249,7 @@ const books = [
     id: 30,
     title: "Grit",
     author: "Angela Duckworth",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1452429704i/27213329.jpg",
+    cover: "https://m.media-amazon.com/images/I/71gPBwjsEfL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/grit",
     driveLink: ""
 },
