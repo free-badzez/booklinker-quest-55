@@ -33,7 +33,7 @@ const books = [
     id: 3,
     title: "Sapiens: A Brief History of Humankind",
     author: "Yuval Noah Harari",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595674531i/23692271.jpg",
+    cover: "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
     link: "/reader/sapiens",
     driveLink: ""
   },
@@ -81,7 +81,7 @@ const books = [
     id: 9,
     title: "Hyperion",
     author: "Dan Simmons",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1405546838i/77566.jpg",
+    cover: "https://m.media-amazon.com/images/I/91V0S0qjKwL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/hyperion",
     driveLink: "" // Add your Google Drive link here
   },
@@ -89,7 +89,7 @@ const books = [
     id: 10,
     title: "Harry Potter and the Sorcerer’s Stone",
     author: "J.K. Rowling",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170803558i/3.jpg",
+    cover: "https://m.media-amazon.com/images/I/81q77Q39nEL.jpg",
     link: "/reader/harry-potter-sorcerers-stone",
     driveLink: ""
   },
@@ -97,7 +97,7 @@ const books = [
     id: 11,
     title: "Children of Time",
     author: "Adrian Tchaikovsky",
-    cover: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1431492647i/25499718.jpg",
+    cover: "https://m.media-amazon.com/images/I/8158B6v-ugL.jpg",
     link: "/reader/children-of-time",
     driveLink: "" // Add your Google Drive link here
   },
