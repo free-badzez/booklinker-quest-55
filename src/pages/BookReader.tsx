@@ -79,7 +79,7 @@ const bookPDFs = {
   "To Kill a Mockingbird":"https://drive.google.com/file/d/1k8PgtS_fPo2BKMp_QDH7fa6VsDl7T8VO/preview",
   "The Laws of Human Nature":"https://drive.google.com/file/d/11WHUgPdL3hM_Gu0MXbAA5Ht7nTYMInVm/preview",
   "The Lean Startup":"https://drive.google.com/file/d/1GPcLcAFMqL0WG9gszSRfoQlnpDvi_2Bl/preview",
-  "The Left Hand of Darkness":"",
+  "The Left Hand of Darkness":"https://drive.google.com/file/d/1mGZCndwCHQlRqjiLzaXybvcQESEWVXby/preview",
   "The Love Hypothesis":"https://drive.google.com/file/d/17tpTcR05YX01OomOiXUIfvb1y0DhTEDp/preview",
   "The Lord of the Rings":"https://drive.google.com/file/d/1ZdV3w_hZPf4qp8LsOgcLVyQB2cJ_ebAs/preview",
   "The Martian":"https://drive.google.com/file/d/1UJ4GAvAHtiYHAgAoXbUJMqY44vYCfJls/preview",
