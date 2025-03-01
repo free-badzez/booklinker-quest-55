@@ -106,7 +106,7 @@ const bookPDFs = {
   "The-5th-Wave":"https://drive.google.com/file/d/13MmiIK98eiR-BfY2Ujy6WVhuaD82xdDc/preview",
   "Think-and-grow-rich": "https://drive.google.com/file/d/13hwJcgT8Pd9Y8Cck4In4Jz23sYJa9sN_/preview",
   "1984":"https://drive.google.com/file/d/1Z1LCJP3LW7UN3wSJOsLkgeDp7shiDbbv/preview",
-  "12-Rules-for-Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview",
+  "12-Rules-for-Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview"
 };
 
 const BookReader = () => {
