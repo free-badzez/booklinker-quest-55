@@ -841,150 +841,68 @@ const sciFiBooks = books.filter((book) =>
 );
 
 
-
 const Index = () => {
-  const [searchQuery, setSearchQuery] = useState("");  // ✅ Manages search input
-  
+  const [searchQuery, setSearchQuery] = useState("");  
   const navigate = useNavigate();
 
-  const filteredTopReadBooks = searchQuery
-    ? topReadBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+  // ✅ Filter books dynamically for search
+  const filteredBooks = searchQuery
+    ? books.filter((book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : topReadBooks;
+    : null; // If no search, use predefined lists
 
-  const filteredMotivationBooks = searchQuery
-    ? motivationBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : motivationBooks;
-
-  const filteredSciFiBooks = searchQuery
-    ? sciFiBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : sciFiBooks;
+  // ✅ Books that don’t belong to any category
+  const uncategorizedBooks = filteredBooks
+    ? filteredBooks.filter(book => !topReadBooks.includes(book) && !motivationBooks.includes(book) && !sciFiBooks.includes(book))
+    : [];
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
       <div className="px-4 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="container mx-auto max-w-7xl relative"
-        >
-          {/* ✅ Corrected SearchBar */}
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="container mx-auto max-w-7xl relative">
+          
+          {/* ✅ SearchBar now correctly updates searchQuery */}
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-2xl font-bold text-gray-900 mb-6 text-left"
-          >
-            Top Read Books
-          </motion.h2>
+          {/* ✅ Show "All Books" only when searching */}
+          {searchQuery && uncategorizedBooks.length > 0 && (
+            <>
+              <motion.h2 className="text-2xl font-bold text-gray-900 mb-6 text-left">All Books</motion.h2>
+              <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16">
+                {uncategorizedBooks.map((book) => (
+                  <BookCard key={`all-${book.id}`} {...book} />
+                ))}
+              </motion.div>
+            </>
+          )}
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
-          >
-            {filteredTopReadBooks.map((book) => (
+          {/* ✅ Top Read Books Section */}
+          <motion.h2 className="text-2xl font-bold text-gray-900 mb-6 text-left">Top Read Books</motion.h2>
+          <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16">
+            {(filteredBooks ? filteredBooks.filter(book => topReadBooks.includes(book)) : topReadBooks).map((book) => (
               <BookCard key={`topread-${book.id}`} {...book} />
             ))}
           </motion.div>
+
+          {/* ✅ Motivation Section */}
+          <motion.h2 className="text-2xl font-bold text-gray-900 mb-6 text-left">Motivation</motion.h2>
+          <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {(filteredBooks ? filteredBooks.filter(book => motivationBooks.includes(book)) : motivationBooks).map((book) => (
+              <BookCard key={`motivation-${book.id}`} {...book} />
+            ))}
+          </motion.div>
+
+          {/* ✅ Sci-Fi Section */}
+          <motion.h2 className="text-2xl font-bold text-gray-900 mb-6 text-left">Sci-Fi</motion.h2>
+          <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {(filteredBooks ? filteredBooks.filter(book => sciFiBooks.includes(book)) : sciFiBooks).map((book) => (
+              <BookCard key={`scifi-${book.id}`} {...book} />
+            ))}
+          </motion.div>
+
         </motion.div>
-      </div>
-
-      <div className="bg-gradient-to-r from-[#FDE1D3] to-[#D3E4FD] py-16">
-        <div className="px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="container mx-auto max-w-7xl"
-          >
-            <header className="text-center mb-12">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
-              >
-                Motivation
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg text-gray-600"
-              >
-                Books that inspire and motivate
-              </motion.p>
-            </header>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-            >
-              {filteredMotivationBooks.map((book) => (
-                <BookCard key={`motivation-${book.id}`} {...book} />
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-16">
-        <div className="px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="container mx-auto max-w-7xl"
-          >
-            <header className="text-center mb-12">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl md:text-4xl font-bold text-white mb-3"
-              >
-                SCI-FI
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg text-gray-300"
-              >
-                Explore the future through science fiction
-              </motion.p>
-            </header>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-            >
-              {filteredSciFiBooks.map((book) => (
-                <BookCard key={`scifi-${book.id}`} {...book} />
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
       </div>
     </div>
   );
