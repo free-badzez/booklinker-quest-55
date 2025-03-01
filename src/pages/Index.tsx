@@ -843,33 +843,33 @@ const sciFiBooks = books.filter((book) =>
 
 
 const Index = () => {
-  const [searchQuery, setSearchQuery] = useState("");  // ✅ Manages search input
-  
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
   const filteredTopReadBooks = searchQuery
-    ? topReadBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : topReadBooks;
+  ? topReadBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : topReadBooks;
 
-  const filteredMotivationBooks = searchQuery
-    ? motivationBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : motivationBooks;
+const filteredMotivationBooks = searchQuery
+  ? motivationBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : motivationBooks;
 
-  const filteredSciFiBooks = searchQuery
-    ? sciFiBooks.filter(
-        (book) =>
-          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          book.author.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : sciFiBooks;
+const filteredSciFiBooks = searchQuery
+  ? sciFiBooks.filter(
+      (book) =>
+        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        book.author.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  : sciFiBooks;
+
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
@@ -880,8 +880,45 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="container mx-auto max-w-7xl relative"
         >
-          {/* ✅ Corrected SearchBar */}
-          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          {/* Menu Button */}
+          <div className="absolute right-4 top-0 z-10">
+  <DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <Button variant="outline" size="icon">
+        <Menu className="h-5 w-5" />
+      </Button>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent>
+      <DropdownMenuItem onClick={() => (window.location.href = "https://mcqgenrator.netlify.app/")}>
+        MCQ Generator
+      </DropdownMenuItem>
+      <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
+        Pomodoro Timer
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>
+</div>
+
+          <header className="text-center mb-12">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
+            >
+              BookLinker
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-lg text-gray-600"
+            >
+              Find and explore your next favorite book
+            </motion.p>
+          </header>
+
+          <SearchBar onSearch={setSearchQuery} />
 
           <motion.h2
             initial={{ opacity: 0 }}
@@ -898,7 +935,7 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
           >
-            {filteredTopReadBooks.map((book) => (
+           {filteredTopReadBooks.map((book) => (
               <BookCard key={`topread-${book.id}`} {...book} />
             ))}
           </motion.div>
@@ -940,7 +977,7 @@ const Index = () => {
             >
               {filteredMotivationBooks.map((book) => (
                 <BookCard key={`motivation-${book.id}`} {...book} />
-              ))}
+                ))}
             </motion.div>
           </motion.div>
         </div>
@@ -980,8 +1017,8 @@ const Index = () => {
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
             >
               {filteredSciFiBooks.map((book) => (
-                <BookCard key={`scifi-${book.id}`} {...book} />
-              ))}
+                  <BookCard key={`scifi-${book.id}`} {...book} />
+                ))}
             </motion.div>
           </motion.div>
         </div>
@@ -989,6 +1026,5 @@ const Index = () => {
     </div>
   );
 };
-
 
 export default Index;
