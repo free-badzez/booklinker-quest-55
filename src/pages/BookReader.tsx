@@ -55,7 +55,7 @@ const bookPDFs = {
   "Principles":"https://drive.google.com/file/d/1hAFCPfZ4pce9WTBLvaSMbKefEfFJcsEa/preview",
   "project-hail-mary": "https://drive.google.com/file/d/18OCx5hN-lw_3GlAyY5Mma8uL-BuoREgG/preview",
   "red-rising": "https://drive.google.com/file/d/1i3CcgK38MuT7xiweWC_V-CjwQaDxpt1O/preview",
-  "Reminders-of-Him":"https://drive.google.com/file/d/1JedXt50oIc7KnOs9Hhfevd73aGVPsqox/preview" 
+  "Reminders-of-Him":"https://drive.google.com/file/d/1JedXt50oIc7KnOs9Hhfevd73aGVPsqox/preview",
   "Red,-White-&-Royal-Blue":"https://drive.google.com/file/d/1Cm1l21X1Y9ZQIHuyssSSX-MTjNoQxcCk/preview",
   "rich-dad-poor-dad": "https://drive.google.com/file/d/1Nj5WiCn_CY1BfuMKm2mKwuiPGSDtE-MR/preview",
   "Sapiens":"https://drive.google.com/file/d/1AbuHGlWMrCMcwVWjnUqeBBjiG9N_RjDk/preview",
