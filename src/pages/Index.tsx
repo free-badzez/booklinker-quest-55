@@ -241,7 +241,7 @@ const books = [
     id: 29,
     title: "It Ends with Us",
     author: "Colleen Hoover",
-    cover: "https://m.media-amazon.com/images/I/81G91BUSHsL._UF1000,1000_QL80_.jpg",
+    cover: "https://m.media-amazon.com/images/I/91CqNElQaKL._AC_UF1000,1000_QL80_.jpg",
     link: "/reader/it-ends-with-us",
     driveLink: ""
   },
