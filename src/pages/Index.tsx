@@ -840,36 +840,43 @@ const sciFiBooks = books.filter((book) =>
   sciFiTitles.includes(book.title.toLowerCase())
 );
 
-
-
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
+  // Global search across all books
+  const filteredAllBooks = searchQuery
+    ? books.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
+  // Existing filtered lists for topReadBooks, motivationBooks, and sciFiBooks
   const filteredTopReadBooks = searchQuery
-  ? topReadBooks.filter(
-      (book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  : topReadBooks;
+    ? topReadBooks.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : topReadBooks;
 
-const filteredMotivationBooks = searchQuery
-  ? motivationBooks.filter(
-      (book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  : motivationBooks;
+  const filteredMotivationBooks = searchQuery
+    ? motivationBooks.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : motivationBooks;
 
-const filteredSciFiBooks = searchQuery
-  ? sciFiBooks.filter(
-      (book) =>
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  : sciFiBooks;
-
+  const filteredSciFiBooks = searchQuery
+    ? sciFiBooks.filter(
+        (book) =>
+          book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          book.author.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : sciFiBooks;
 
   return (
     <div className="min-h-screen bg-[#f8f9fa]">
@@ -882,22 +889,22 @@ const filteredSciFiBooks = searchQuery
         >
           {/* Menu Button */}
           <div className="absolute right-4 top-0 z-10">
-  <DropdownMenu>
-    <DropdownMenuTrigger asChild>
-      <Button variant="outline" size="icon">
-        <Menu className="h-5 w-5" />
-      </Button>
-    </DropdownMenuTrigger>
-    <DropdownMenuContent>
-      <DropdownMenuItem onClick={() => (window.location.href = "https://mcqgenrator.netlify.app/")}>
-        MCQ Generator
-      </DropdownMenuItem>
-      <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
-        Pomodoro Timer
-      </DropdownMenuItem>
-    </DropdownMenuContent>
-  </DropdownMenu>
-</div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem onClick={() => (window.location.href = "https://mcqgenrator.netlify.app/")}>
+                  MCQ Generator
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
+                  Pomodoro Timer
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           <header className="text-center mb-12">
             <motion.h1
@@ -920,111 +927,152 @@ const filteredSciFiBooks = searchQuery
 
           <SearchBar onSearch={setSearchQuery} />
 
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-2xl font-bold text-gray-900 mb-6 text-left"
-          >
-            Top Read Books
-          </motion.h2>
+          {/* Global Search Results */}
+          {searchQuery && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="mb-16"
+            >
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-2xl font-bold text-gray-900 mb-6 text-left"
+              >
+                Search Results
+              </motion.h2>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
+              >
+                {filteredAllBooks.map((book) => (
+                  <BookCard key={`search-${book.id}`} {...book} />
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
-          >
-           {filteredTopReadBooks.map((book) => (
-              <BookCard key={`topread-${book.id}`} {...book} />
-            ))}
-          </motion.div>
+          {/* Top Read Books */}
+          {!searchQuery && (
+            <>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-2xl font-bold text-gray-900 mb-6 text-left"
+              >
+                Top Read Books
+              </motion.h2>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 mb-16"
+              >
+                {filteredTopReadBooks.map((book) => (
+                  <BookCard key={`topread-${book.id}`} {...book} />
+                ))}
+              </motion.div>
+            </>
+          )}
+
+          {/* Motivation Books */}
+          {!searchQuery && (
+            <div className="bg-gradient-to-r from-[#FDE1D3] to-[#D3E4FD] py-16">
+              <div className="px-4">
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="container mx-auto max-w-7xl"
+                >
+                  <header className="text-center mb-12">
+                    <motion.h2
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
+                    >
+                      Motivation
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-lg text-gray-600"
+                    >
+                      Books that inspire and motivate
+                    </motion.p>
+                  </header>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+                  >
+                    {filteredMotivationBooks.map((book) => (
+                      <BookCard key={`motivation-${book.id}`} {...book} />
+                    ))}
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          )}
+
+          {/* Sci-Fi Books */}
+          {!searchQuery && (
+            <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-16">
+              <div className="px-4">
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="container mx-auto max-w-7xl"
+                >
+                  <header className="text-center mb-12">
+                    <motion.h2
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="text-3xl md:text-4xl font-bold text-white mb-3"
+                    >
+                      SCI-FI
+                    </motion.h2>
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-lg text-gray-300"
+                    >
+                      Explore the future through science fiction
+                    </motion.p>
+                  </header>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+                  >
+                    {filteredSciFiBooks.map((book) => (
+                      <BookCard key={`scifi-${book.id}`} {...book} />
+                    ))}
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
+          )}
         </motion.div>
-      </div>
-
-      <div className="bg-gradient-to-r from-[#FDE1D3] to-[#D3E4FD] py-16">
-        <div className="px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="container mx-auto max-w-7xl"
-          >
-            <header className="text-center mb-12">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
-              >
-                Motivation
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg text-gray-600"
-              >
-                Books that inspire and motivate
-              </motion.p>
-            </header>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-            >
-              {filteredMotivationBooks.map((book) => (
-                <BookCard key={`motivation-${book.id}`} {...book} />
-                ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-900 to-blue-900 py-16">
-        <div className="px-4">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="container mx-auto max-w-7xl"
-          >
-            <header className="text-center mb-12">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl md:text-4xl font-bold text-white mb-3"
-              >
-                SCI-FI
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg text-gray-300"
-              >
-                Explore the future through science fiction
-              </motion.p>
-            </header>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
-            >
-              {filteredSciFiBooks.map((book) => (
-                  <BookCard key={`scifi-${book.id}`} {...book} />
-                ))}
-            </motion.div>
-          </motion.div>
-        </div>
       </div>
     </div>
   );
 };
 
 export default Index;
+
+
