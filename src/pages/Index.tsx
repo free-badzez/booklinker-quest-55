@@ -362,7 +362,7 @@ const books = [
     title: "People We Meet on Vacation",
     author: "Emily Henry",
     cover: "https://m.media-amazon.com/images/I/81i9kql+6PL._AC_UF1000,1000_QL80_.jpg",
-    link: "/reader/People-We-Meet-on-Vacation"
+    link: "/reader/People-We-Meet-on-Vacation",
     driveLink: ""
   },
     {
