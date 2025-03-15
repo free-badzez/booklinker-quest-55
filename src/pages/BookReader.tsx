@@ -121,8 +121,13 @@ const bookPDFs = {
   "Anna-Karenina":"https://drive.google.com/file/d/1puROz544NJZeW2SlqkN81Nna_bg2wDaZ/preview",
   "Jane-Eyre":"https://drive.google.com/file/d/15GMbmh4ABW8xPLK-OpJA5F69k1e979-v/preview",
   "Wuthering-Heights":"https://drive.google.com/file/d/1zYRelBg7M0eOER8FY8hwggJpkU1F0E4a/preview",
-  
-  
+  "The-Count-of-Monte-Cristo":"https://drive.google.com/file/d/1KNfRgY_g95g73Qy3IF_r6Q_mtin0_JqB/preview",
+  "The-Grapes-of-Wrath":"https://drive.google.com/file/d/1CptUutrP5mbV11ti6mkgHnm0cFKGxqwh/preview",
+  "Slaughterhouse-Five":"https://drive.google.com/file/d/1P-jlLW5zRTo-fstZoz16n885w7fMZN_Y/preview",
+  "Beloved":"https://drive.google.com/file/d/1FmitYqzxtRywvS_bjnok0eWOEMqrefM8/preview",
+  "Middlemarch":"",
+  "The-Trial":"https://drive.google.com/file/d/17wQVPx-O2nKIoD06JlPkquP3OmxMVM7D/preview",
+  "The-Sun-Also-Rises":" "
   
   
 };
