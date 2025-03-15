@@ -10,7 +10,7 @@ const bookPDFs = {
   "A-Clockwork-Orange":"https://drive.google.com/file/d/1XbrztIkksVre0_uCUDhx9dKHbqJUDvuk/preview",
   "A-Game-of-Thrones":"https://drive.google.com/file/d/1tBZdyKOzRoMYqOBi5xu7crYG51nv9MvB/preview",
   "A-memory-called-empire": "https://drive.google.com/file/d/1NE3LMVzkHzMlGEoRqSiyMykAU3uSlvR4/preview",
-  "A-Passage-to-India":"https://drive.google.com/file/d/1gGtGa-Z7fZNneXKMpI9cSjWAafvO9Ezd/preview",
+  "A-Passage-to-India":"https://drive.google.com/file/d/1sQ_27JI0BClx-tLK5dLUN4jkxY7ysk_H/preview",
   "A-Wrinkle-in-Time":"https://drive.google.com/file/d/1EDpNdZavSvCw_VUm3vipIYNoh1HuRyX0/preview",
   "And-Then-There-Were-None":"https://drive.google.com/file/d/1qIKFte4Tw6Tmksp9P6JFkpS1DmRUvJID/preview",
   "Anna-Karenina":"https://drive.google.com/file/d/1puROz544NJZeW2SlqkN81Nna_bg2wDaZ/preview",
