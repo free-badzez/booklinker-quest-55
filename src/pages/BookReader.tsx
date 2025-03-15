@@ -107,6 +107,7 @@ const bookPDFs = {
   "Think-and-grow-rich": "https://drive.google.com/file/d/13hwJcgT8Pd9Y8Cck4In4Jz23sYJa9sN_/preview",
   "1984":"https://drive.google.com/file/d/1Z1LCJP3LW7UN3wSJOsLkgeDp7shiDbbv/preview",
   "12-Rules-for-Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview",
+
   
   "Don-Quixote":"https://drive.google.com/file/d/1MfRCy8J31hFekxtUrpNuRR2pK7yKRHbl/preview",
   "war-and-peace":"https://drive.google.com/file/d/1x48EzlV48xvvKABrGiivlvfyooskummM/preview",
