@@ -127,8 +127,13 @@ const bookPDFs = {
   "Beloved":"https://drive.google.com/file/d/1FmitYqzxtRywvS_bjnok0eWOEMqrefM8/preview",
   "Middlemarch":"",
   "The-Trial":"https://drive.google.com/file/d/17wQVPx-O2nKIoD06JlPkquP3OmxMVM7D/preview",
-  "The-Sun-Also-Rises":" "
-  
+  "The-Sun-Also-Rises":"https://drive.google.com/file/d/1RWsQ0zwp1Fsmxt1WtYIEkao9VX7B0FIk/preview",
+  "Lolita":"https://drive.google.com/file/d/1YEq533B1_GdCwdIMEHfBNGFksM59vDGy/preview",
+  "The-Sound-and-the-Fury":"https://drive.google.com/file/d/1oNdeql8gluSlT9rax_CuzQ8w6yrvy6zZ/preview",
+  "Invisible-Man":"",
+  "The-Stranger":"",
+  "Heart of Darkness":"",
+  "A Passage to India":"",
   
 };
 
