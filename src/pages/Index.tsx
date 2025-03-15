@@ -814,279 +814,317 @@ const books = [
     link: "/reader/12-rules-for-life",
     driveLink: ""
 },
-  [
   {
     "id": 101,
     "title": "Ulysses",
     "author": "James Joyce",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1XPT85LkMY4Djn5DBkOw89DuAZOs3NMeO/preview"
+    "cover": "https://m.media-amazon.com/images/I/61urWm3OpbL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Ulysses",
+    "driveLink": ""
   },
   {
     "id": 102,
     "title": "Madame Bovary",
     "author": "Gustave Flaubert",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1_CV2F0kuvpl1uVs_n3Bukh7pBrbHBoH4/preview"
+    "cover": "https://m.media-amazon.com/images/I/810LeMHV6RL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/Madame-Bovary",
+    "driveLink": ""
   },
   {
     "id": 103,
     "title": "The Divine Comedy",
     "author": "Dante Alighieri",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1f-s256a5vcEWK3kZm5rOoiZdZncGCsr5/preview"
+    "cover": "https://m.media-amazon.com/images/I/51i-9SGWr-L._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Divine-Comedy",
+    "driveLink": ""
   },
   {
     "id": 104,
     "title": "The Iliad",
     "author": "Homer",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1Lb3-ftetqK7EZ1_M4u6BK9WS10vbP880/preview"
+    "cover": "https://m.media-amazon.com/images/I/91j3tXsWM6L._UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Iliad",
+    "driveLink": ""
   },
   {
     "id": 105,
     "title": "The Odyssey",
     "author": "Homer",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1MZNAI2W8RjZmxAuFhNcB8Afd_zW5qc-e/preview"
+    "cover": "https://m.media-amazon.com/images/I/71rp7o5oTnL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Odyssey",
+    "driveLink": ""
   },
   {
     "id": 106,
     "title": "Anna Karenina",
     "author": "Leo Tolstoy",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1puROz544NJZeW2SlqkN81Nna_bg2wDaZ/preview"
+    "cover": "https://m.media-amazon.com/images/I/71DfOob6UiL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Anna-Karenina",
+    "driveLink": ""
   },
   {
     "id": 107,
     "title": "Jane Eyre",
     "author": "Charlotte Brontë",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/15GMbmh4ABW8xPLK-OpJA5F69k1e979-v/preview"
+    "cover": "https://m.media-amazon.com/images/I/91wbu49sCxL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Jane-Eyre",
+    "driveLink": ""
   },
   {
     "id": 108,
     "title": "Wuthering Heights",
     "author": "Emily Brontë",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1zYRelBg7M0eOER8FY8hwggJpkU1F0E4a/preview"
+    "cover": "https://m.media-amazon.com/images/I/81jPjX2Fw4L._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Wuthering-Heights",
+    "driveLink": ""
   },
   {
     "id": 109,
     "title": "The Count of Monte Cristo",
     "author": "Alexandre Dumas",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1KNfRgY_g95g73Qy3IF_r6Q_mtin0_JqB/preview"
+    "cover": "https://m.media-amazon.com/images/I/81yNjn95mSL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Count-of-Monte-Cristo",
+    "driveLink": ""
   },
   {
     "id": 110,
     "title": "The Grapes of Wrath",
     "author": "John Steinbeck",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1CptUutrP5mbV11ti6mkgHnm0cFKGxqwh/preview"
+    "cover": "https://m.media-amazon.com/images/I/71+go9VLEkL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Grapes-of-Wrath",
+    "driveLink": ""
   },
   {
     "id": 111,
     "title": "Slaughterhouse-Five",
     "author": "Kurt Vonnegut",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1P-jlLW5zRTo-fstZoz16n885w7fMZN_Y/preview"
+    "cover": "https://m.media-amazon.com/images/I/817dhIc6E+L.jpg",
+    "link": "/reader/Slaughterhouse-Five",
+    "driveLink": ""
   },
   {
     "id": 112,
     "title": "Beloved",
     "author": "Toni Morrison",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1FmitYqzxtRywvS_bjnok0eWOEMqrefM8/preview"
+    "cover": "https://m.media-amazon.com/images/I/81eerT6DQFL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Beloved",
+    "driveLink": ""
   },
   {
     "id": 113,
     "title": "Middlemarch",
     "author": "George Eliot",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1anCwsrUTD2uR46C2HO-yF_aS6DeR0TLe/preview"
+    "cover": "https://m.media-amazon.com/images/I/71uioN+Z4QL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/Middlemarch",
+    "driveLink": ""
   },
   {
     "id": 114,
     "title": "The Trial",
     "author": "Franz Kafka",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/17wQVPx-O2nKIoD06JlPkquP3OmxMVM7D/preview"
+    "cover": "https://m.media-amazon.com/images/I/51343X9YPCL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Trial",
+    "driveLink": ""
   },
-  [
   {
     "id": 115,
     "title": "The Sun Also Rises",
     "author": "Ernest Hemingway",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1MnozP4YrAfPhjqreJot9_9-9vLu3KsYP/preview"
+    "cover": "https://m.media-amazon.com/images/I/71wY97OxlyL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Sun-Also-Rises",
+    "driveLink": ""
   },
   {
     "id": 116,
     "title": "Lolita",
     "author": "Vladimir Nabokov",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1M9A9c7lDxwaHP4_j7gWtLMy9bH2VyhvW/preview"
+    "cover": "https://m.media-amazon.com/images/I/71dfSg9HdoL.jpg",
+    "link": "/reader/Lolita",
+    "driveLink": ""
   },
   {
     "id": 117,
     "title": "The Sound and the Fury",
     "author": "William Faulkner",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1IfzBbMytAeLJ6H9PTx52X6UqEBhlkHp3/preview"
+    "cover": "https://m.media-amazon.com/images/I/91ZYg5hcxsL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Sound-and-the-Fury",
+    "driveLink": ""
   },
   {
     "id": 118,
     "title": "Invisible Man",
     "author": "Ralph Ellison",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1RhZydO33P8Aq54bA5nTsvUB93oSRF1CD/preview"
+    "cover": "https://m.media-amazon.com/images/I/91hKkCUkFFL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Invisible-Man",
+    "driveLink": ""
   },
   {
     "id": 119,
     "title": "The Stranger",
     "author": "Albert Camus",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1c8chbGpZORR9jDH71m75bUoI4yk5uHT1/preview"
+    "cover": "https://m.media-amazon.com/images/I/617WkdpG8xL._AC_UF350,350_QL50_.jpg",
+    "link": "/reader/The-Stranger",
+    "driveLink": ""
   },
   {
     "id": 120,
     "title": "Heart of Darkness",
     "author": "Joseph Conrad",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1U_Hl3Q9Wxup5JhXJwBf9pIuM-K6WvFtd/preview"
+    "cover": "https://m.media-amazon.com/images/I/8123K8I8HNL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/Heart-of-Darkness",
+    "driveLink": ""
   },
   {
     "id": 121,
     "title": "A Passage to India",
     "author": "E.M. Forster",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1GjddSGD1yf3AdJlGSDhGHIIQMrtr9Z6u/preview"
+    "cover": "https://m.media-amazon.com/images/I/81Uv++3gx0L._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/A-Passage-to-India",
+    "driveLink": ""
   },
   {
     "id": 122,
     "title": "Catch-22",
     "author": "Joseph Heller",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1a0DpKZBkhLzK2JX7PbDHb5nsPnWYKLh3/preview"
+    "cover": "https://m.media-amazon.com/images/I/71p5srXolYL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/Catch-22",
+    "driveLink": ""
   },
   {
     "id": 123,
     "title": "The Old Man and the Sea",
     "author": "Ernest Hemingway",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1F6NhQbX5NZGz1Lt-WqT-eHl5lL9sxlMh/preview"
+    "cover": "https://m.media-amazon.com/images/I/91Bu7q8oIrL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Old-Man-and-the-Sea",
+    "driveLink": ""
   },
   {
     "id": 124,
     "title": "The Bell Jar",
     "author": "Sylvia Plath",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1Vb3nJ8NkDDprBVDj85M6FQ5vYrAULR9u/preview"
+    "cover": "https://m.media-amazon.com/images/I/81dfBzANy9L._AC_UF894,1000_QL80_.jpg",
+    "link": "/reader/The-Bell-Jar",
+    "driveLink": ""
   },
   {
     "id": 125,
     "title": "A Clockwork Orange",
     "author": "Anthony Burgess",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1xSeP_CW4GZWshzGlwWtD7XkRxpduoH95/preview"
+    "cover": "https://knowthyshelf.com/wp-content/uploads/2015/11/AClockworkOrange_cover.png",
+    "link": "/reader/A-Clockwork-Orange",
+    "driveLink": ""
   },
   {
     "id": 126,
     "title": "The Master and Margarita",
     "author": "Mikhail Bulgakov",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1fjLPQITiKr6vJkoRGgiZGdywob2P8UuW/preview"
+    "cover": "https://m.media-amazon.com/images/I/817nt39Nn3L._UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Master-and-Margarita",
+    "driveLink": ""
   },
   {
     "id": 127,
     "title": "The Picture of Dorian Gray",
     "author": "Oscar Wilde",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1BRX9Zz2-VRYEK-vSTyzTK_rkqZ6MKNkE/preview"
+    "cover": "https://m.media-amazon.com/images/I/81deq0jC7yL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Picture-of-Dorian-Gray",
+    "driveLink": ""
   },
   {
     "id": 128,
     "title": "Les Misérables",
     "author": "Victor Hugo",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1oiWBHuqOeYZ57CWChV_gw5z6FzDQ0b2K/preview"
+    "cover": "https://m.media-amazon.com/images/I/71oZG5DGHFL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Les-Misérables",
+    "driveLink": ""
   },
   {
     "id": 129,
     "title": "Gulliver's Travels",
     "author": "Jonathan Swift",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1EX7xD_sWz8k7B3zHPW0GpZ5ZhhTym2sh/preview"
+    "cover": "https://m.media-amazon.com/images/I/81EebnAZEVL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Gulliver's-Travels",
+    "driveLink": ""
   },
   {
     "id": 130,
     "title": "The Scarlet Letter",
     "author": "Nathaniel Hawthorne",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1-L60bn9yW8qzJajLnQ_XF_dABxYIhX7B/preview"
+    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1404810944i/12296.jpg",
+    "link": "/reader/The-Scarlet-Letter",
+    "driveLink": ""
   },
   {
     "id": 131,
     "title": "The Call of the Wild",
     "author": "Jack London",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1yjlIF_2zRQzOZkF9SgEl8OSyQZJ2yCzN/preview"
+    "cover": "https://m.media-amazon.com/images/I/61EWclqmmfL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Call-of-the-Wild",
+    "driveLink": ""
   },
   {
     "id": 132,
     "title": "Of Mice and Men",
     "author": "John Steinbeck",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1B9DfTbMiYhXTPAwK0vwSLW5i7wxyZ2Mz/preview"
+    "cover": "https://m.media-amazon.com/images/I/71xXwHUrsxL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Of-Mice-and-Men",
+    "driveLink": ""
   },
   {
     "id": 133,
     "title": "To the Lighthouse",
     "author": "Virginia Woolf",
-    "cover": "",
-    "link": "",
+    "cover": "https://m.media-amazon.com/images/I/710voErwQ3L._UF1000,1000_QL80_.jpg",
+    "link": "/reader/To-the-Lighthouse",
     "driveLink": ""
   },
   {
     "id": 134,
     "title": "The Art of War",
     "author": "Sun Tzu",
-    "cover": "",
-    "link": "",
-    "driveLink": "https://drive.google.com/file/d/1D-H4ly2KrRbXvDCOeYNXjzn1TjoUlUK0/preview"
+    "cover": "https://m.media-amazon.com/images/I/71jWgemHbML._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Art-of-War",
+    "driveLink": ""
+  },
+  {
+    "id": 135,
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "cover": "https://m.media-amazon.com/images/I/61yifvabpVL._AC_UF1000,1000_QL80_.jpg",
+    "link": "/reader/Don-Quixote",
+    "driveLink": ""
+  },
+  {
+    "id": 136,
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "cover": "https://rekhtabooks.com/cdn/shop/products/9788175992832.jpg?v=1688454306",
+    "link": "/reader/War-and-Peace",
+    "driveLink": ""
+  },
+  {
+    "id": 137,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "cover": "https://m.media-amazon.com/images/I/81TLiZrasVL._UF1000,1000_QL80_.jpg",
+    "link": "/reader/The-Great-Gatsby",
+    "driveLink": ""
+  },
+  {
+    "id": 138,
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "cover": "https://m.media-amazon.com/images/I/91xNmlf86yL.jpg",
+    "link": "/reader/Moby-Dick",
+    "driveLink": ""
+  },
+  {
+    "id": 139,
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "cover": "https://m.media-amazon.com/images/I/61Q67G0DpSL.jpg",
+    "link": "/reader/The-Brothers-Karamazov",
+    "driveLink": ""
   },
 ];
 
