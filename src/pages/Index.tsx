@@ -1214,6 +1214,9 @@ const Index = () => {
                 <DropdownMenuItem onClick={() => (window.location.href = "https://calm-tapioca-eab340.netlify.app/")}>
                   Pomodoro Timer
                 </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => (window.location.href = "https://learnify-math.netlify.app/")}>
+                  Math Mentor
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
