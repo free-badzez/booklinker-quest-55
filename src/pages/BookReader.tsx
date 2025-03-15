@@ -82,7 +82,7 @@ const bookPDFs = {
   "The-Alchemist": "https://drive.google.com/file/d/1BmfvQ8XDA6G5IAyureXwHeeNiQnKSTrH/preview",
   "The-Almanack-of-Naval-Ravikant":"https://drive.google.com/file/d/1IWJDlM258zs2MPL4ezY5MjB6NicKJ4hE/preview",
   "The-Andromeda-Strain":"https://drive.google.com/file/d/1M2po7oxaALv00xOC4RZ7Hftv8p58Hr7y/preview",
-  "The-Bell-Jar":"https://drive.google.com/file/d/1iR5Fee0s-cDfHi1meBppQcbeGSDrb_46/preview",
+  "The-Bell-Jar":"https://drive.google.com/file/d/1hGQbPQv8aX6e3NyKmTN2sMNzgeKh-c2s/preview",
   "The-Brothers-Karamazov":"https://drive.google.com/file/d/1dzMzfUHXfiWt0oInh4ZA1qrsXDDipnOr/preview",
   "The-Call-of-the-Wild":"https://drive.google.com/file/d/1AvZQImhcem-h_Y4INNYoS-1hd5hyIpfc/preview",
   "The-Catcher-in-the-Rye":"https://drive.google.com/file/d/1vuQbPRQa9OtsGjFNEWY0Vcsv1V_-PvbL/preview",
