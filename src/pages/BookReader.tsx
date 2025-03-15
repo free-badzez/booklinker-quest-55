@@ -106,7 +106,25 @@ const bookPDFs = {
   "The-5th-Wave":"https://drive.google.com/file/d/13MmiIK98eiR-BfY2Ujy6WVhuaD82xdDc/preview",
   "Think-and-grow-rich": "https://drive.google.com/file/d/13hwJcgT8Pd9Y8Cck4In4Jz23sYJa9sN_/preview",
   "1984":"https://drive.google.com/file/d/1Z1LCJP3LW7UN3wSJOsLkgeDp7shiDbbv/preview",
-  "12-Rules-for-Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview"
+  "12-Rules-for-Life":"https://drive.google.com/file/d/1gzsp0BhdUJEbpfpovjg5AFRc0oxfXPeJ/preview",
+  
+  "Don-Quixote":"https://drive.google.com/file/d/1MfRCy8J31hFekxtUrpNuRR2pK7yKRHbl/preview",
+  "war-and-peace":"https://drive.google.com/file/d/1x48EzlV48xvvKABrGiivlvfyooskummM/preview",
+  "The-Great-Gatsby":"https://drive.google.com/file/d/1-_KENXRy5kOL5p0cuJyxrpnykwwnanFO/preview",
+  "Moby-Dick":"https://drive.google.com/file/d/1uXU_wbYsc_RHUGvC4NjT1v5MbbF-OLVE/preview",
+  "The-Brothers-Karamazov":"https://drive.google.com/file/d/1dzMzfUHXfiWt0oInh4ZA1qrsXDDipnOr/preview",
+  "Ulysses":"https://drive.google.com/file/d/1XPT85LkMY4Djn5DBkOw89DuAZOs3NMeO/preview",
+  "Madame-Bovary":"https://drive.google.com/file/d/1_CV2F0kuvpl1uVs_n3Bukh7pBrbHBoH4/preview",
+  "The-Divine-Comedy":"https://drive.google.com/file/d/1f-s256a5vcEWK3kZm5rOoiZdZncGCsr5/preview",
+  "The-Iliad":"https://drive.google.com/file/d/1Lb3-ftetqK7EZ1_M4u6BK9WS10vbP880/preview",
+  "The-Odyssey":"https://drive.google.com/file/d/1MZNAI2W8RjZmxAuFhNcB8Afd_zW5qc-e/preview",
+  "Anna-Karenina":"https://drive.google.com/file/d/1puROz544NJZeW2SlqkN81Nna_bg2wDaZ/preview",
+  "Jane-Eyre":"https://drive.google.com/file/d/15GMbmh4ABW8xPLK-OpJA5F69k1e979-v/preview",
+  "Wuthering-Heights":"https://drive.google.com/file/d/1zYRelBg7M0eOER8FY8hwggJpkU1F0E4a/preview",
+  
+  
+  
+  
 };
 
 const BookReader = () => {
